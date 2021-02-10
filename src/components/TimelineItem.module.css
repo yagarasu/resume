@@ -1,0 +1,45 @@
+.TimelineItem {
+  width: 41.666%;
+  position: relative;
+}
+
+.TimelineItem h2 {
+  font-size: 2em;
+  margin: 0em;
+  padding-bottom: 8px;
+  font-weight: lighter;
+}
+
+.TimelineItem h3 {
+  font-size: 1em;
+  margin: 0px;
+  padding-bottom: 8px;
+  font-weight: bold;
+  color: #575757;
+}
+
+.TimelineItem h4 {
+  font-size: 1em;
+  margin: 0px;
+  padding-bottom: 8px;
+  font-weight: normal;
+  color: #575757;
+  font-style: italic;
+}
+
+.icon {
+  position: absolute;
+  right: -27.333%;
+  display: block;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: #2F3D5A;
+  border: 3px solid #fafafa;
+}
+
+.content {
+  font-size: 1em;
+  line-height: 1.8;
+  color: #999999;
+}

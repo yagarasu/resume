@@ -1,0 +1,9 @@
+.Timeline::before {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 5px;
+  height: 100%;
+  background: #575757;
+  left: 50%;
+}

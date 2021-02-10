@@ -1,0 +1,4 @@
+.MenuList {
+  display: flex;
+  flex-direction: row;
+}

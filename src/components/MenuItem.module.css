@@ -1,0 +1,48 @@
+.MenuItem {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  box-sizing: border-box;
+  color: #0E0E0E;
+  border-left-width: 3px;
+  border-left-style: solid;
+  border-left-color: #0e0e0e;
+  text-align: left;
+  padding-left: 1em;
+  padding-right: 1em;
+  padding-top: 0.3em;
+  padding-bottom: 0.3em;
+  text-decoration: none;
+  max-width: 33%;
+}
+
+.MenuItem:hover {
+  color: #2F3D5A;
+}
+
+.MenuItem:hover .title {
+  transform: translateX(0.5em);
+}
+
+.title {
+  display: block;
+  font-weight: bold;
+  transform: translateX(0em);
+  transition: transform 400ms;
+  margin-bottom: 0.5em;
+}
+
+.description {
+  display: block;
+  font-size: 0.8em;
+  opacity: 0.5;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+}
+
+.icon {
+  margin-right: 16px;
+}
