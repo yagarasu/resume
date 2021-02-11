@@ -8,3 +8,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background: #fafafa;
 }
+
+a:link, a:visited {
+  text-decoration: none;
+}

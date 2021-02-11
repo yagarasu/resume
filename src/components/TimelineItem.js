@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import classnames from 'classnames/bind'
 import styles from './TimelineItem.module.css'
 import { FontAwesomeIcon as Icon } from '@fortawesome/react-fontawesome'
+import { faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons'
 import moment from 'moment'
 
 const cx = classnames.bind(styles)
@@ -10,6 +11,7 @@ const cx = classnames.bind(styles)
 const TimelineItem = ({
   title,
   subtitle,
+  subtitleLink,
   dateStart,
   dateEnd,
   icon,
@@ -21,9 +23,15 @@ const TimelineItem = ({
   return (
     <div className={cx('TimelineItem')}>
       <h2>{title}</h2>
-      <h3>{subtitle}</h3>
+      <h3>
+        {
+          subtitleLink
+            ? <a href={subtitleLink} target="_blank" rel='noreferrer'>{subtitle} <Icon icon={faExternalLinkAlt} /></a>
+            : subtitle
+        }
+      </h3>
       <h4>{startStr} - {endStr}</h4>
-      <div className={cx('icon')}>A</div>
+      <div className={cx('icon')}>{icon}</div>
       <div className={cx('content')}>
         {children}
       </div>
@@ -42,7 +50,11 @@ TimelineItem.propTypes = {
     PropTypes.string,
     PropTypes.instanceOf(moment)
   ]),
-  icon: PropTypes.func,
+  icon: PropTypes.oneOfType([
+    PropTypes.arrayOf(PropTypes.node),
+    PropTypes.object,
+    PropTypes.node
+  ]),
   children: PropTypes.oneOfType([
     PropTypes.arrayOf(PropTypes.node),
     PropTypes.object,

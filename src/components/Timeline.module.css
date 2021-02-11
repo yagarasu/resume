@@ -1,9 +1,14 @@
+.Timeline {
+  position: relative;
+  padding-left: 8.333%;
+}
+
 .Timeline::before {
   content: '';
   display: block;
   position: absolute;
-  width: 5px;
+  width: 2px;
   height: 100%;
-  background: #575757;
-  left: 50%;
+  background: #bdbdbd;
+  left: 4.1666%;
 }
