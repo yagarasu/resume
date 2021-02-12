@@ -1,10 +1,15 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import { FontAwesomeIcon as Icon } from '@fortawesome/react-fontawesome'
+import classnames from 'classnames/bind'
+import styles from './Section.module.css'
 
-const Section = ({ title, children }) => {
+const cx =classnames.bind(styles)
+
+const Section = ({ title, children, icon, className }) => {
   return (
-    <section>
-      <h1>{title}</h1>
+    <section className={cx('Section', className)}>
+      {title && <h1>{icon && (<Icon icon={icon} size="1x" className={cx('icon')} />)}{title}</h1>}
       {children}
     </section>
   )

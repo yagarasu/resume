@@ -1,0 +1,17 @@
+.Section {
+  font-size: 1em;
+  line-height: 1.8;
+  color: #999999;
+}
+
+.Section h1 {
+  color: #0e0e0e;
+  font-size: 2em;
+  margin: 0em;
+  margin-bottom: 0.5em;
+  font-weight: lighter;
+}
+
+.icon {
+  margin-right: 0.5em;
+}
