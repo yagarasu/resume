@@ -1,0 +1,26 @@
+.SkillList {
+  list-style: none;
+  margin: 0px;
+  padding-left: 1em;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.compact {
+  font-size: 0.7em;
+}
+.compact .item {
+  width: calc(25% - 0.5em);
+}
+
+.item {
+  margin: 0px;
+  width: calc(33.333% - 1em);
+}
+
+.description {
+  display: block;
+  font-size: 0.7em;
+}
