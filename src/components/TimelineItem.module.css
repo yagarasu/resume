@@ -1,5 +1,6 @@
 .TimelineItem {
   position: relative;
+  margin-bottom: 2em;
 }
 
 .TimelineItem h2 {

@@ -25,3 +25,8 @@
   margin-left: 1em;
   margin-right: 1em;
 }
+
+.b-left {
+  border-left: 1px solid #e0e0e0;
+  width: calc(50% - 3em - 1px);
+}
