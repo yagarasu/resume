@@ -18,15 +18,23 @@
   width: calc(50% - 2em);
   margin-left: 1em;
   margin-right: 1em;
+  display: flex;
+  flex-direction: column;
 }
 
 .full {
   width: calc(100% - 2em);
   margin-left: 1em;
   margin-right: 1em;
+  display: flex;
+  flex-direction: column;
 }
 
 .b-left {
   border-left: 1px solid #e0e0e0;
-  width: calc(50% - 3em - 1px);
+  padding-left: 1em;
+}
+
+.big p {
+  font-size: 1.3em;
 }
