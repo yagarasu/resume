@@ -1,0 +1,26 @@
+.LanguageList {
+  margin: 0px;
+  padding: 0px;
+  padding-left: 1em;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+}
+
+.LanguageList > li {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+}
+
+.language {
+  width: 35%;
+}
+
+.level {
+  font-size: 0.7em;
+}
+
+.icon {
+  margin-right: 1em;
+}

@@ -3,7 +3,7 @@
   margin-bottom: 2em;
 }
 
-.TimelineItem h2 {
+.content > h2 {
   font-size: 2em;
   margin: 0em;
   padding-bottom: 8px;
@@ -11,7 +11,7 @@
   line-height: 1.25;
 }
 
-.TimelineItem h3 {
+.content > h3 {
   font-size: 1em;
   margin: 0px;
   padding-bottom: 8px;
@@ -19,7 +19,7 @@
   color: #424242;
 }
 
-.TimelineItem h4 {
+.content > h4 {
   font-size: 1em;
   margin: 0px;
   padding-bottom: 8px;
@@ -30,6 +30,14 @@
 
 .TimelineItem a:link, .TimelineItem a:visited {
   color: #2F3D5A;
+}
+
+.content > ul {
+  margin: 0px;
+  padding: 0px;
+}
+.content > ul > li {
+  margin-bottom: 1em;
 }
 
 .icon {

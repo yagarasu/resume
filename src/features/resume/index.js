@@ -5,13 +5,24 @@ import Section from '../../components/Section'
 import Timeline from '../../components/Timeline'
 import TimelineItem from '../../components/TimelineItem'
 import SkillList from '../../components/SkillList'
+import ConferenceList from '../../components/ConferenceList'
+import LanguageList from '../../components/LanguageList'
+import Accordion from '../../components/Accordion'
 import pslLogo from '../../assets/psl.png'
 import unidepLogo from '../../assets/unidep.png'
 import unitecLogo from '../../assets/unitec.png'
 import cemLogo from '../../assets/cem.png'
+import ahLogo from '../../assets/logo.svg'
 import styles from './Resume.module.css'
-import { faMask, faFileInvoice, faBriefcase } from '@fortawesome/free-solid-svg-icons'
+import {  } from '@fortawesome/free-solid-svg-icons'
 import {
+  faHammer,
+  faFileInvoice,
+  faBriefcase,
+  faGraduationCap,
+  faHandsHelping,
+  faMicrophoneAlt,
+  faGlobeAmericas,
   faFileCode,
   faDatabase,
   faSearch,
@@ -20,7 +31,13 @@ import {
   faChartBar,
   faFileExcel,
   faTasks,
-  faGamepad
+  faGamepad,
+  faMicrochip,
+  faProjectDiagram,
+  faChalkboardTeacher,
+  faBrain,
+  faUserTie,
+  faUserCheck
 } from '@fortawesome/free-solid-svg-icons'
 import {
   faJs,
@@ -41,7 +58,8 @@ const ResumePage = props => {
     <div className={cx('Resume')}>
       <div className={cx('full')}>
         <Section title="Summary" icon={faFileInvoice} className={cx('big')}>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce nec iaculis diam. Duis aliquam urna eget diam feugiat posuere. Suspendisse et blandit ante. Ut sed lorem libero. Quisque at risus eu est luctus tincidunt sit amet non erat. Aliquam in mi volutpat nisl lobortis varius. Nunc pulvinar luctus lectus, vitae pellentesque lacus posuere sit amet.</p>
+          <p>I am a Web Developer specialized in Frontend (but capable of doing Backend) based in Queretaro, Mexico. I have more than 10 years of experience working with user facing and internal apps, websites and tools. I majored in Graphic Design, but I have been a passionate developer since my hands first touched a keyboard as a kid.</p>
+          <p>I am open for the next challenge where I could keep writing code in the latest technologies to build amazing products alongside great developers. And after a year working from home with great success for both my current employer and myself, I expect to keep working remotely.</p>
         </Section>
       </div>
       <hr className={cx('full')} />
@@ -56,20 +74,28 @@ const ResumePage = props => {
               dateEnd="present"
               icon={<img src={pslLogo} style={{ width: '50px', height: '50px', borderRadius: '50%' }} alt="P/S/L Group" />}
             >
-              <p>Frontend and backend development of various content centered web apps for the medical and pharma industry. Responsible for designing the overall implementation of diverse features and mentoring junior developers.</p>
-              <SkillList compact items={[
-                { name: 'Javascript', icon: faJs },
-                { name: 'React', icon: faReact },
-                { name: 'Redux', icon: faFileCode },
-                { name: 'CSS+Sass', icon: faSass },
-                { name: 'Symfony', icon: faPhp },
-                { name: 'Node.js', icon: faNodeJs },
-                { name: 'MySQL', icon: faDatabase },
-                { name: 'MongoDB', icon: faDatabase },
-                { name: 'ElasticSearch', icon: faSearch },
-                { name: 'Git', icon: faGitAlt },
-                { name: 'Webpack', icon: faCube }
-              ]} />
+              <ul>
+                <li>Main developer in the rebuild of a large content aggregator app serving tens of thousands of users using React, Redux, Redux Saga and Awilix.</li>
+                <li>Participated in the construction of the Backend for the same app using Symfony 5, MySQL and ElasticSearch.</li>
+                <li>Worked on a Newsletter building and delivering system using Symfony 5, MySQL and ElasticSearch.</li>
+                <li>Created an admin app for this content aggregator using React Admin and Material-UI.</li>
+                <li>Mentored a couple of junior developers to help them deliver more maintainable, decoupled code with better practices.</li>
+              </ul>
+              <Accordion title="Tech used" icon={faMicrochip}>
+                <SkillList compact items={[
+                  { name: 'Javascript', icon: faJs },
+                  { name: 'React', icon: faReact },
+                  { name: 'Redux', icon: faFileCode },
+                  { name: 'CSS+Sass', icon: faSass },
+                  { name: 'Symfony', icon: faPhp },
+                  { name: 'Node.js', icon: faNodeJs },
+                  { name: 'MySQL', icon: faDatabase },
+                  { name: 'MongoDB', icon: faDatabase },
+                  { name: 'ElasticSearch', icon: faSearch },
+                  { name: 'Git', icon: faGitAlt },
+                  { name: 'Webpack', icon: faCube }
+                ]} />
+              </Accordion>
             </TimelineItem>
             <TimelineItem
               title="Application Developer"
@@ -79,21 +105,56 @@ const ResumePage = props => {
               dateEnd={moment('2019-04')}
               icon={<img src={pslLogo} style={{ width: '50px', height: '50px', borderRadius: '50%' }} alt="P/S/L Group" />}
             >
-              <p>Frontend and backend development of varied web apps related to market segments in the medical industry and content indexing for the pharma industry.</p>
-              <SkillList compact items={[
-                { name: 'Javascript', icon: faJs },
-                { name: 'React', icon: faReact },
-                { name: 'Redux', icon: faFileCode },
-                { name: 'CSS+Sass', icon: faSass },
-                { name: 'Drupal 7', icon: faPhp },
-                { name: 'Node.js', icon: faNodeJs },
-                { name: 'Koa', icon: faNodeJs },
-                { name: 'MySQL', icon: faDatabase },
-                { name: 'MongoDB', icon: faDatabase },
-                { name: 'ElasticSearch', icon: faSearch },
-                { name: 'Git', icon: faGitAlt },
-                { name: 'Webpack', icon: faCube }
-              ]} />
+              <ul>
+                <li>Part of a team of developers working on an internal data visualization application using Koa (Node js), MongoDB, ElasticSearch with a React frontend.</li>
+                <li>Worked on a survey generation and data visualization application using Symfony 2, MySQL, Google Charts, dynamic SVG via javascript and a prototype using D3.js.</li>
+                <li>Maintained a dozen or so content aggregator websites in Drupal 7 and a legacy website in Drupal 5.</li>
+              </ul>
+              <Accordion title="Tech used" icon={faMicrochip}>
+                <SkillList compact items={[
+                  { name: 'Javascript', icon: faJs },
+                  { name: 'React', icon: faReact },
+                  { name: 'Redux', icon: faFileCode },
+                  { name: 'CSS+Sass', icon: faSass },
+                  { name: 'Drupal 7', icon: faPhp },
+                  { name: 'Node.js', icon: faNodeJs },
+                  { name: 'Koa', icon: faNodeJs },
+                  { name: 'MySQL', icon: faDatabase },
+                  { name: 'MongoDB', icon: faDatabase },
+                  { name: 'ElasticSearch', icon: faSearch },
+                  { name: 'Git', icon: faGitAlt },
+                  { name: 'Webpack', icon: faCube }
+                ]} />
+              </Accordion>
+            </TimelineItem>
+            <TimelineItem
+              title="Freelance"
+              dateStart={moment('2014-02')}
+              dateEnd={moment('2013-09')}
+              icon={<img src={ahLogo} style={{ width: '50px', height: '50px', borderRadius: '50%', background: '#f1f1f1' }} alt="unidep" />}
+            >
+              <ul>
+                <li>Developed WordPress based websites for different small and medium sized companies and groups.</li>
+                <li>Developed an embeddable cost calculator for a University as a conversion tool integrating with HubSpot API and an internal tool via SOAP.</li>
+                <li>Developed a CLI command to transform addresses in Excel files to geolocation points using Google geocoder.</li>
+                <li>Developed the prototype of a data visualization tool using D3.js, React, Node, MongoDB and ElasticSearch.</li>
+              </ul>
+              <Accordion title="Tech used" icon={faMicrochip}>
+                <SkillList compact items={[
+                  { name: 'PHP', icon: faPhp },
+                  { name: 'WordPress', icon: faWordpress },
+                  { name: 'CSS+Sass', icon: faSass },
+                  { name: 'Javascript', icon: faJs },
+                  { name: 'MySQL', icon: faDatabase },
+                  { name: 'MsSQL Server', icon: faDatabase },
+                  { name: 'G Analytics', icon: faChartBar },
+                  { name: 'Node.js', icon: faNodeJs },
+                  { name: 'MongoDB', icon: faDatabase },
+                  { name: 'ElasticSearch', icon: faSearch },
+                  { name: 'Excel', icon: faFileExcel },
+                  { name: 'D3.js', icon: faProjectDiagram }
+                ]} />
+              </Accordion>
             </TimelineItem>
             <TimelineItem
               title="Digital Marketing Manager"
@@ -103,21 +164,25 @@ const ResumePage = props => {
               dateEnd={moment('2013-09')}
               icon={<img src={unidepLogo} style={{ width: '50px', height: '50px', borderRadius: '50%' }} alt="unidep" />}
             >
-              <p>Planned the Digital Strategy for the commercialization of different products, being responsible for University's on line presence performance and results (website, landing pages, microsites, social media, display and search campaigns, etc.).</p>
-              <p>Optimized conversion tools and user experience through web analysis, reducing bouncing rates and increasing lead flow.</p>
-              <p>Implemented better practices regarding digital infrastructure security, software development processes and Search Engine Optimization (taking campi pages and landing pages to Google's first page).</p>
-              <p>Supervising the optimization and national support of tools like: the CRM, the labour exchange system and others.</p>
-              <SkillList compact items={[
-                { name: 'PHP', icon: faPhp },
-                { name: 'WordPress', icon: faWordpress },
-                { name: 'CSS+Sass', icon: faSass },
-                { name: 'Javascript', icon: faJs },
-                { name: 'MySQL', icon: faDatabase },
-                { name: 'MsSQL Server', icon: faDatabase },
-                { name: 'G Analytics', icon: faChartBar },
-                { name: 'Excel', icon: faFileExcel },
-                { name: 'Project', icon: faTasks }
-              ]} />
+              <ul>
+                <li>Planned the Digital Strategy for the commercialization of different products, being responsible for University's online presence performance and results (website, landing pages, microsites, social media, display and search campaigns, etc.).</li>
+                <li>Optimized conversion tools and user experience through web analysis, reducing bouncing rates and increasing lead flow.</li>
+                <li>Implemented better practices regarding digital infrastructure security, software development processes and Search Engine Optimization (taking campi pages and landing pages to Google's first page).</li>
+                <li>Supervising the optimization and national support of tools like: the CRM, the labour exchange system and others.</li>
+              </ul>
+              <Accordion title="Tech used" icon={faMicrochip}>
+                <SkillList compact items={[
+                  { name: 'PHP', icon: faPhp },
+                  { name: 'WordPress', icon: faWordpress },
+                  { name: 'CSS+Sass', icon: faSass },
+                  { name: 'Javascript', icon: faJs },
+                  { name: 'MySQL', icon: faDatabase },
+                  { name: 'MsSQL Server', icon: faDatabase },
+                  { name: 'G Analytics', icon: faChartBar },
+                  { name: 'Excel', icon: faFileExcel },
+                  { name: 'Project', icon: faTasks }
+                ]} />
+              </Accordion>
             </TimelineItem>
             <TimelineItem
               title="Web Development Coordinator"
@@ -127,17 +192,23 @@ const ResumePage = props => {
               dateEnd={moment('2013-09')}
               icon={<img src={unidepLogo} style={{ width: '50px', height: '50px', borderRadius: '50%' }} alt="unidep" />}
             >
-              <p>Generated digital strategies based on web statistic analysis, dramatically reducing the overall bouncing rate from 75% to 13%. Developed new lead obtaining tools, increasing Web share in New Enrollment. Developed and maintained an in-house CRM web app, increasing business visibility over the sales funnel.</p>
-              <SkillList compact items={[
-                { name: 'PHP', icon: faPhp },
-                { name: 'WordPress', icon: faWordpress },
-                { name: 'CSS+Sass', icon: faSass },
-                { name: 'Javascript', icon: faJs },
-                { name: 'MySQL', icon: faDatabase },
-                { name: 'MsSQL Server', icon: faDatabase },
-                { name: 'G Analytics', icon: faChartBar },
-                { name: 'Excel', icon: faFileExcel }
-              ]} />
+              <ul>
+                <li>Generated digital strategies based on web statistic analysis, dramatically reducing the overall bouncing rate from 75% to 13%.</li>
+                <li>Developed new lead obtaining tools, increasing Web share in New Enrollment.</li>
+                <li>Developed and maintained an in-house CRM web app using PHP MsSQL Server and Bootstrap, increasing business visibility over the sales funnel.</li>
+              </ul>
+              <Accordion title="Tech used" icon={faMicrochip}>
+                <SkillList compact items={[
+                  { name: 'PHP', icon: faPhp },
+                  { name: 'WordPress', icon: faWordpress },
+                  { name: 'CSS+Sass', icon: faSass },
+                  { name: 'Javascript', icon: faJs },
+                  { name: 'MySQL', icon: faDatabase },
+                  { name: 'MsSQL Server', icon: faDatabase },
+                  { name: 'G Analytics', icon: faChartBar },
+                  { name: 'Excel', icon: faFileExcel }
+                ]} />
+              </Accordion>
             </TimelineItem>
             <TimelineItem
               title="Web Programmer"
@@ -147,15 +218,20 @@ const ResumePage = props => {
               dateEnd={moment('2013-09')}
               icon={<img src={unidepLogo} style={{ width: '50px', height: '50px', borderRadius: '50%' }} alt="unidep" />}
             >
-              <p>Developed and maintained a new website focused on lead obtention. Implemented web analytics tools for the first time in the University's marketing department. Developed a complex follow-up system connecting web, mailing and the call center, boosting new enrollment.</p>
-              <SkillList compact items={[
-                { name: 'PHP', icon: faPhp },
-                { name: 'WordPress', icon: faWordpress },
-                { name: 'CSS+Sass', icon: faSass },
-                { name: 'Javascript', icon: faJs },
-                { name: 'MySQL', icon: faDatabase },
-                { name: 'G Analytics', icon: faChartBar }
-              ]} />
+              <ul>
+                <li>Developed and maintained a new website focused on lead obtention using WordPress with a custom theme.</li>
+                <li>Implemented web analytics tools for the first time in the University's marketing department.</li>
+                <li>Developed a complex follow-up system connecting web, mailing and the call center, boosting new enrollment. This system was built with PHP and MySQL.</li>
+              </ul>
+              <Accordion title="Tech used" icon={faMicrochip}>
+                <SkillList compact items={[
+                  { name: 'PHP', icon: faPhp },
+                  { name: 'WordPress', icon: faWordpress },
+                  { name: 'CSS+Sass', icon: faSass },
+                  { name: 'Javascript', icon: faJs },
+                  { name: 'MySQL', icon: faDatabase }
+                ]} />
+              </Accordion>
             </TimelineItem>
             <TimelineItem
               title="Internship"
@@ -165,21 +241,25 @@ const ResumePage = props => {
               dateEnd={moment('2013-09')}
               icon={<img src={unitecLogo} style={{ width: '50px', height: '50px', borderRadius: '50%' }} alt="unitec" />}
             >
-              <p>Built and maintained microsites and landing pages for lead obtention.</p>
-              <p>Developed a Facebook game for the University as a par of a 5 member multidisciplinary team of interns.</p>
-              <SkillList compact items={[
-                { name: 'PHP', icon: faPhp },
-                { name: 'WordPress', icon: faWordpress },
-                { name: 'CSS+Sass', icon: faSass },
-                { name: 'Javascript', icon: faJs },
-                { name: 'MySQL', icon: faDatabase },
-                { name: 'ActionScript 3', icon: faGamepad },
-                { name: 'FB Graph API', icon: faFacebook }
-              ]} />
+              <ul>
+                <li>Built and maintained microsites and landing pages for lead obtention in WordPress and HTML + CSS + JS.</li>
+                <li>Developed a Facebook game using Flash and ActionScript 3 for the University alongside other 5 team members in a multidisciplinary team of interns.</li>
+              </ul>
+              <Accordion title="Tech used" icon={faMicrochip}>
+                <SkillList compact items={[
+                  { name: 'PHP', icon: faPhp },
+                  { name: 'WordPress', icon: faWordpress },
+                  { name: 'CSS+Sass', icon: faSass },
+                  { name: 'Javascript', icon: faJs },
+                  { name: 'MySQL', icon: faDatabase },
+                  { name: 'ActionScript 3', icon: faGamepad },
+                  { name: 'FB Graph API', icon: faFacebook }
+                ]} />
+              </Accordion>
             </TimelineItem>
           </Timeline>
         </Section>
-        <Section title="Education" icon={faBriefcase}>
+        <Section title="Education" icon={faGraduationCap}>
           <Timeline>
             <TimelineItem
               title="Bachelor's Degree, Graphic Design"
@@ -199,7 +279,7 @@ const ResumePage = props => {
         </Section>
       </div>
       <div className={cx('half')}>
-        <Section title="Skills" icon={faMask} className={cx('b-left')}>
+        <Section title="Skills" icon={faHammer} className={cx('b-left')}>
             <h2 className={cx('subtitle')}>Frontend</h2>
             <SkillList items={[
               { name: 'Javascript', icon: faJs, description: 'ES6, Vanilla and jQuery' },
@@ -230,6 +310,36 @@ const ResumePage = props => {
               { name: 'Git', icon: faGitAlt, description: 'Git CLI; Github, Bitbucket and Stash' },
               { name: 'Webpack', icon: faCube, description: 'config.js creation' }
             ]} />
+        </Section>
+        <hr className={cx('full')} />
+        <Section title="Soft Skills" icon={faHandsHelping} className={cx('b-left')}>
+          <SkillList items={[
+              { name: 'Willingness to learn', icon: faGraduationCap, description: 'New tech, new frameworks, new skills, even new languages' },
+              { name: 'Mentorship', icon: faChalkboardTeacher, description: 'I love to share what I\'ve learned in the past 10 years' },
+              { name: 'Organized', icon: faTasks, description: 'From task lists to kanban; I have a couple of tricks under my sleeve' },
+              { name: 'Problem Solving', icon: faBrain, description: 'From initial requirements analysis to prod troubleshooting' },
+              { name: 'Integrity', icon: faUserTie, description: 'The truth is my compass' },
+              { name: 'Responsible', icon: faUserCheck, description: 'Fulfilling my duties and going above and beyond' }
+            ]} />
+        </Section>
+        <hr className={cx('full')} />
+        <Section title="Attended Conferences" icon={faMicrophoneAlt} className={cx('b-left')}>
+          <ConferenceList items={[
+            { name: 'ConFoo Montreal', year: '2020', link: 'https://confoo.ca/en/yul2020' },
+            { name: 'ConFoo Montreal', year: '2019', link: 'https://confoo.ca/en/yul2019' },
+            { name: 'ConFoo Montreal', year: '2017', link: 'https://confoo.ca/en/yul2017' },
+            { name: 'Campus Party Mexico 4', year: '2013', link: 'https://www.campus-party.org/' },
+            { name: 'Campus Party Mexico 3', year: '2011', link: 'https://www.campus-party.org/' },
+            { name: 'Campus Party Mexico 2', year: '2010', link: 'https://www.campus-party.org/' },
+          ]} />
+        </Section>
+        <hr className={cx('full')} />
+        <Section title="Languages" icon={faGlobeAmericas} className={cx('b-left')}>
+          <LanguageList items={[
+            { name: 'Spanish', countryCode: 'MX', level: 'Native' },
+            { name: 'English', countryCode: 'US', level: 'Cambridge First Certificate' },
+            { name: 'Japanese', countryCode: 'JP', level: 'JLPT N5 + 3 months in Japan' },
+          ]} />
         </Section>
       </div>
     </div>

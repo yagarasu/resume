@@ -1,0 +1,16 @@
+.title {
+  font-size: 0.75em;
+  cursor: pointer;
+}
+
+.content {
+  display: none;
+}
+
+.open {
+  display: block;
+}
+
+.icon {
+  margin-right: 1em;
+}

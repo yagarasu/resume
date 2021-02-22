@@ -16,6 +16,10 @@
   max-width: 33%;
 }
 
+.MenuItem:link, .MenuItem:visited {
+  color: #0E0E0E;
+}
+
 .MenuItem:hover {
   color: #2F3D5A;
 }
