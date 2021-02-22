@@ -1,0 +1,32 @@
+import React, { useState } from 'react'
+import PropTypes from 'prop-types'
+import useCollapse from 'react-collapsed'
+import styles from './ViewMore.module.css'
+import { FontAwesomeIcon as Icon } from '@fortawesome/react-fontawesome'
+import { faMinusSquare, faPlusSquare } from '@fortawesome/free-solid-svg-icons'
+
+const ViewMore = ({
+  children
+}) => {
+  const { getCollapseProps, getToggleProps, isExpanded } = useCollapse()
+  const icon = isExpanded ? faMinusSquare : faPlusSquare
+  const showString = isExpanded ? 'less' : 'more'
+  return (
+    <>
+      <div  {...getCollapseProps()}>
+        {children}
+      </div>
+      <button className={styles.button} {...getToggleProps()}><Icon icon={icon} className={styles.icon} />Show {showString}</button>
+    </>
+  )
+}
+
+ViewMore.propTypes = {
+  children: PropTypes.oneOfType([
+    PropTypes.arrayOf(PropTypes.node),
+    PropTypes.object,
+    PropTypes.node
+  ]),
+}
+
+export default ViewMore

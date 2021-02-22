@@ -30,6 +30,22 @@
   flex-direction: column;
 }
 
+.third {
+  width: calc(33.333% - 2em);
+  margin-left: 1em;
+  margin-right: 1em;
+  display: flex;
+  flex-direction: column;
+}
+
+.two-thirds {
+  width: calc(66.666% - 2em);
+  margin-left: 1em;
+  margin-right: 1em;
+  display: flex;
+  flex-direction: column;
+}
+
 .b-left {
   border-left: 1px solid #e0e0e0;
   padding-left: 1em;
@@ -37,4 +53,13 @@
 
 .big p {
   font-size: 1.2em;
+}
+
+.small p {
+  font-size: 0.75em;
+  line-height: 2;
+}
+
+.no-title {
+  padding-top: 4em
 }

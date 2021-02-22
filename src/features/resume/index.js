@@ -8,6 +8,7 @@ import SkillList from '../../components/SkillList'
 import ConferenceList from '../../components/ConferenceList'
 import LanguageList from '../../components/LanguageList'
 import Accordion from '../../components/Accordion'
+import ViewMore from '../../components/ViewMore'
 import pslLogo from '../../assets/psl.png'
 import unidepLogo from '../../assets/unidep.png'
 import unitecLogo from '../../assets/unitec.png'
@@ -56,9 +57,13 @@ const cx = classnames.bind(styles)
 const ResumePage = props => {
   return (
     <div className={cx('Resume')}>
-      <div className={cx('full')}>
+      <div className={cx('two-thirds')}>
         <Section title="Summary" icon={faFileInvoice} className={cx('big')}>
-          <p>I am a Web Developer specialized in Frontend (but capable of doing Backend) based in Queretaro, Mexico. I have more than 10 years of experience working with user facing and internal apps, websites and tools. I majored in Graphic Design, but I have been a passionate developer since my hands first touched a keyboard as a kid.</p>
+          <p>I am a <strong>Web Developer</strong> specialized in <strong>Frontend</strong> (but capable of doing Backend) based in <strong>Queretaro, Mexico</strong>. I have more than <strong>10 years</strong> of experience working with user facing and internal apps, websites and tools. I majored in <strong>Graphic Design</strong>, but I have been a <strong>passionate developer</strong> since my hands first touched a keyboard as a kid.</p>
+        </Section>
+      </div>
+      <div className={cx('third')}>
+        <Section className={cx('small', 'no-title')}>
           <p>I am open for the next challenge where I could keep writing code in the latest technologies to build amazing products alongside great developers. And after a year working from home with great success for both my current employer and myself, I expect to keep working remotely.</p>
         </Section>
       </div>
@@ -156,125 +161,109 @@ const ResumePage = props => {
                 ]} />
               </Accordion>
             </TimelineItem>
-            <TimelineItem
-              title="Digital Marketing Manager"
-              subtitle="Professional Develoment University"
-              subtitleLink="https://unidep.mx/"
-              dateStart={moment('2014-02')}
-              dateEnd={moment('2013-09')}
-              icon={<img src={unidepLogo} style={{ width: '50px', height: '50px', borderRadius: '50%' }} alt="unidep" />}
-            >
-              <ul>
-                <li>Planned the Digital Strategy for the commercialization of different products, being responsible for University's online presence performance and results (website, landing pages, microsites, social media, display and search campaigns, etc.).</li>
-                <li>Optimized conversion tools and user experience through web analysis, reducing bouncing rates and increasing lead flow.</li>
-                <li>Implemented better practices regarding digital infrastructure security, software development processes and Search Engine Optimization (taking campi pages and landing pages to Google's first page).</li>
-                <li>Supervising the optimization and national support of tools like: the CRM, the labour exchange system and others.</li>
-              </ul>
-              <Accordion title="Tech used" icon={faMicrochip}>
-                <SkillList compact items={[
-                  { name: 'PHP', icon: faPhp },
-                  { name: 'WordPress', icon: faWordpress },
-                  { name: 'CSS+Sass', icon: faSass },
-                  { name: 'Javascript', icon: faJs },
-                  { name: 'MySQL', icon: faDatabase },
-                  { name: 'MsSQL Server', icon: faDatabase },
-                  { name: 'G Analytics', icon: faChartBar },
-                  { name: 'Excel', icon: faFileExcel },
-                  { name: 'Project', icon: faTasks }
-                ]} />
-              </Accordion>
-            </TimelineItem>
-            <TimelineItem
-              title="Web Development Coordinator"
-              subtitle="Professional Develoment University"
-              subtitleLink="https://unidep.mx/"
-              dateStart={moment('2014-02')}
-              dateEnd={moment('2013-09')}
-              icon={<img src={unidepLogo} style={{ width: '50px', height: '50px', borderRadius: '50%' }} alt="unidep" />}
-            >
-              <ul>
-                <li>Generated digital strategies based on web statistic analysis, dramatically reducing the overall bouncing rate from 75% to 13%.</li>
-                <li>Developed new lead obtaining tools, increasing Web share in New Enrollment.</li>
-                <li>Developed and maintained an in-house CRM web app using PHP MsSQL Server and Bootstrap, increasing business visibility over the sales funnel.</li>
-              </ul>
-              <Accordion title="Tech used" icon={faMicrochip}>
-                <SkillList compact items={[
-                  { name: 'PHP', icon: faPhp },
-                  { name: 'WordPress', icon: faWordpress },
-                  { name: 'CSS+Sass', icon: faSass },
-                  { name: 'Javascript', icon: faJs },
-                  { name: 'MySQL', icon: faDatabase },
-                  { name: 'MsSQL Server', icon: faDatabase },
-                  { name: 'G Analytics', icon: faChartBar },
-                  { name: 'Excel', icon: faFileExcel }
-                ]} />
-              </Accordion>
-            </TimelineItem>
-            <TimelineItem
-              title="Web Programmer"
-              subtitle="Professional Develoment University"
-              subtitleLink="https://unidep.mx/"
-              dateStart={moment('2014-02')}
-              dateEnd={moment('2013-09')}
-              icon={<img src={unidepLogo} style={{ width: '50px', height: '50px', borderRadius: '50%' }} alt="unidep" />}
-            >
-              <ul>
-                <li>Developed and maintained a new website focused on lead obtention using WordPress with a custom theme.</li>
-                <li>Implemented web analytics tools for the first time in the University's marketing department.</li>
-                <li>Developed a complex follow-up system connecting web, mailing and the call center, boosting new enrollment. This system was built with PHP and MySQL.</li>
-              </ul>
-              <Accordion title="Tech used" icon={faMicrochip}>
-                <SkillList compact items={[
-                  { name: 'PHP', icon: faPhp },
-                  { name: 'WordPress', icon: faWordpress },
-                  { name: 'CSS+Sass', icon: faSass },
-                  { name: 'Javascript', icon: faJs },
-                  { name: 'MySQL', icon: faDatabase }
-                ]} />
-              </Accordion>
-            </TimelineItem>
-            <TimelineItem
-              title="Internship"
-              subtitle="Technological University of Mexico"
-              subtitleLink="https://unitec.mx/"
-              dateStart={moment('2014-02')}
-              dateEnd={moment('2013-09')}
-              icon={<img src={unitecLogo} style={{ width: '50px', height: '50px', borderRadius: '50%' }} alt="unitec" />}
-            >
-              <ul>
-                <li>Built and maintained microsites and landing pages for lead obtention in WordPress and HTML + CSS + JS.</li>
-                <li>Developed a Facebook game using Flash and ActionScript 3 for the University alongside other 5 team members in a multidisciplinary team of interns.</li>
-              </ul>
-              <Accordion title="Tech used" icon={faMicrochip}>
-                <SkillList compact items={[
-                  { name: 'PHP', icon: faPhp },
-                  { name: 'WordPress', icon: faWordpress },
-                  { name: 'CSS+Sass', icon: faSass },
-                  { name: 'Javascript', icon: faJs },
-                  { name: 'MySQL', icon: faDatabase },
-                  { name: 'ActionScript 3', icon: faGamepad },
-                  { name: 'FB Graph API', icon: faFacebook }
-                ]} />
-              </Accordion>
-            </TimelineItem>
-          </Timeline>
-        </Section>
-        <Section title="Education" icon={faGraduationCap}>
-          <Timeline>
-            <TimelineItem
-              title="Bachelor's Degree, Graphic Design"
-              subtitle="Technological University of Mexico"
-              dateStart={moment('2019-05')}
-              dateEnd="present"
-              icon={<img src={unitecLogo} style={{ width: '50px', height: '50px', borderRadius: '50%' }} alt="unitec" />}
-            />
-            <TimelineItem
-              title="Technical Course, Graphic Design"
-              subtitle="Montreal Education Center (Mexico)"
-              dateStart={moment('2019-05')}
-              dateEnd="present"
-              icon={<img src={cemLogo} style={{ width: '50px', height: '50px', borderRadius: '50%' }} alt="C.E.M." />}
-            />
+            <ViewMore>
+              <TimelineItem
+                title="Digital Marketing Manager"
+                subtitle="Professional Develoment University"
+                subtitleLink="https://unidep.mx/"
+                dateStart={moment('2014-02')}
+                dateEnd={moment('2013-09')}
+                icon={<img src={unidepLogo} style={{ width: '50px', height: '50px', borderRadius: '50%' }} alt="unidep" />}
+              >
+                <ul>
+                  <li>Planned the Digital Strategy for the commercialization of different products, being responsible for University's online presence performance and results (website, landing pages, microsites, social media, display and search campaigns, etc.).</li>
+                  <li>Optimized conversion tools and user experience through web analysis, reducing bouncing rates and increasing lead flow.</li>
+                  <li>Implemented better practices regarding digital infrastructure security, software development processes and Search Engine Optimization (taking campi pages and landing pages to Google's first page).</li>
+                  <li>Supervising the optimization and national support of tools like: the CRM, the labour exchange system and others.</li>
+                </ul>
+                <Accordion title="Tech used" icon={faMicrochip}>
+                  <SkillList compact items={[
+                    { name: 'PHP', icon: faPhp },
+                    { name: 'WordPress', icon: faWordpress },
+                    { name: 'CSS+Sass', icon: faSass },
+                    { name: 'Javascript', icon: faJs },
+                    { name: 'MySQL', icon: faDatabase },
+                    { name: 'MsSQL Server', icon: faDatabase },
+                    { name: 'G Analytics', icon: faChartBar },
+                    { name: 'Excel', icon: faFileExcel },
+                    { name: 'Project', icon: faTasks }
+                  ]} />
+                </Accordion>
+              </TimelineItem>
+              <TimelineItem
+                title="Web Development Coordinator"
+                subtitle="Professional Develoment University"
+                subtitleLink="https://unidep.mx/"
+                dateStart={moment('2014-02')}
+                dateEnd={moment('2013-09')}
+                icon={<img src={unidepLogo} style={{ width: '50px', height: '50px', borderRadius: '50%' }} alt="unidep" />}
+              >
+                <ul>
+                  <li>Generated digital strategies based on web statistic analysis, dramatically reducing the overall bouncing rate from 75% to 13%.</li>
+                  <li>Developed new lead obtaining tools, increasing Web share in New Enrollment.</li>
+                  <li>Developed and maintained an in-house CRM web app using PHP MsSQL Server and Bootstrap, increasing business visibility over the sales funnel.</li>
+                </ul>
+                <Accordion title="Tech used" icon={faMicrochip}>
+                  <SkillList compact items={[
+                    { name: 'PHP', icon: faPhp },
+                    { name: 'WordPress', icon: faWordpress },
+                    { name: 'CSS+Sass', icon: faSass },
+                    { name: 'Javascript', icon: faJs },
+                    { name: 'MySQL', icon: faDatabase },
+                    { name: 'MsSQL Server', icon: faDatabase },
+                    { name: 'G Analytics', icon: faChartBar },
+                    { name: 'Excel', icon: faFileExcel }
+                  ]} />
+                </Accordion>
+              </TimelineItem>
+              <TimelineItem
+                title="Web Programmer"
+                subtitle="Professional Develoment University"
+                subtitleLink="https://unidep.mx/"
+                dateStart={moment('2014-02')}
+                dateEnd={moment('2013-09')}
+                icon={<img src={unidepLogo} style={{ width: '50px', height: '50px', borderRadius: '50%' }} alt="unidep" />}
+              >
+                <ul>
+                  <li>Developed and maintained a new website focused on lead obtention using WordPress with a custom theme.</li>
+                  <li>Implemented web analytics tools for the first time in the University's marketing department.</li>
+                  <li>Developed a complex follow-up system connecting web, mailing and the call center, boosting new enrollment. This system was built with PHP and MySQL.</li>
+                </ul>
+                <Accordion title="Tech used" icon={faMicrochip}>
+                  <SkillList compact items={[
+                    { name: 'PHP', icon: faPhp },
+                    { name: 'WordPress', icon: faWordpress },
+                    { name: 'CSS+Sass', icon: faSass },
+                    { name: 'Javascript', icon: faJs },
+                    { name: 'MySQL', icon: faDatabase }
+                  ]} />
+                </Accordion>
+              </TimelineItem>
+              <TimelineItem
+                title="Internship"
+                subtitle="Technological University of Mexico"
+                subtitleLink="https://unitec.mx/"
+                dateStart={moment('2014-02')}
+                dateEnd={moment('2013-09')}
+                icon={<img src={unitecLogo} style={{ width: '50px', height: '50px', borderRadius: '50%' }} alt="unitec" />}
+              >
+                <ul>
+                  <li>Built and maintained microsites and landing pages for lead obtention in WordPress and HTML + CSS + JS.</li>
+                  <li>Developed a Facebook game using Flash and ActionScript 3 for the University alongside other 5 team members in a multidisciplinary team of interns.</li>
+                </ul>
+                <Accordion title="Tech used" icon={faMicrochip}>
+                  <SkillList compact items={[
+                    { name: 'PHP', icon: faPhp },
+                    { name: 'WordPress', icon: faWordpress },
+                    { name: 'CSS+Sass', icon: faSass },
+                    { name: 'Javascript', icon: faJs },
+                    { name: 'MySQL', icon: faDatabase },
+                    { name: 'ActionScript 3', icon: faGamepad },
+                    { name: 'FB Graph API', icon: faFacebook }
+                  ]} />
+                </Accordion>
+              </TimelineItem>
+            </ViewMore>
           </Timeline>
         </Section>
       </div>
@@ -323,6 +312,14 @@ const ResumePage = props => {
             ]} />
         </Section>
         <hr className={cx('full')} />
+        <Section title="Languages" icon={faGlobeAmericas} className={cx('b-left')}>
+          <LanguageList items={[
+            { name: 'Spanish', countryCode: 'MX', level: 'Native' },
+            { name: 'English', countryCode: 'US', level: 'Cambridge First Certificate' },
+            { name: 'Japanese', countryCode: 'JP', level: 'JLPT N5 + 3 months in Japan' },
+          ]} />
+        </Section>
+        <hr className={cx('full')} />
         <Section title="Attended Conferences" icon={faMicrophoneAlt} className={cx('b-left')}>
           <ConferenceList items={[
             { name: 'ConFoo Montreal', year: '2020', link: 'https://confoo.ca/en/yul2020' },
@@ -334,12 +331,23 @@ const ResumePage = props => {
           ]} />
         </Section>
         <hr className={cx('full')} />
-        <Section title="Languages" icon={faGlobeAmericas} className={cx('b-left')}>
-          <LanguageList items={[
-            { name: 'Spanish', countryCode: 'MX', level: 'Native' },
-            { name: 'English', countryCode: 'US', level: 'Cambridge First Certificate' },
-            { name: 'Japanese', countryCode: 'JP', level: 'JLPT N5 + 3 months in Japan' },
-          ]} />
+        <Section title="Education" icon={faGraduationCap}>
+          <Timeline>
+            <TimelineItem
+              title="Bachelor's Degree, Graphic Design"
+              subtitle="Technological University of Mexico"
+              dateStart={moment('2019-05')}
+              dateEnd="present"
+              icon={<img src={unitecLogo} style={{ width: '50px', height: '50px', borderRadius: '50%' }} alt="unitec" />}
+            />
+            <TimelineItem
+              title="Technical Course, Graphic Design"
+              subtitle="Montreal Education Center (Mexico)"
+              dateStart={moment('2019-05')}
+              dateEnd="present"
+              icon={<img src={cemLogo} style={{ width: '50px', height: '50px', borderRadius: '50%' }} alt="C.E.M." />}
+            />
+          </Timeline>
         </Section>
       </div>
     </div>
