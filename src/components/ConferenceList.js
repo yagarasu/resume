@@ -11,7 +11,7 @@ const ConferenceList = ({
   return (
     <ul className={styles.ConferenceList} {...props}>
       {items.map(({ name, link, year }) => (
-        <li key={`${name}${year}`}>{name} ({year}){link && (<a href={link} target="_blank" rel='noreferrer' className={styles.link}><Icon icon={faExternalLinkAlt} /></a>)}</li>
+        <li key={`${name}${year}`}>{name} ({year}){link && (<a href={link} target="_blank" rel="noreferrer" className={styles.link}><Icon icon={faExternalLinkAlt} /></a>)}</li>
       ))}
     </ul>
   )

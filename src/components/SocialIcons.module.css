@@ -1,0 +1,33 @@
+.SocialIcons {
+  font-size: 16px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.SocialIcons a {
+  color: #fafafa;
+}
+
+.variant-night.SocialIcons, .variant-night.SocialIcons a {
+  color: #fafafa;
+}
+
+.variant-day.SocialIcons, .variant-day.SocialIcons a {
+  color: #0e0e0e;
+}
+
+.expanded {
+  flex-direction: column;
+}
+
+.expanded > a {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 1em;
+  align-items: center;
+}
+
+.expanded > a > span {
+  margin-left: 1em;
+}

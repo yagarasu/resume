@@ -18,6 +18,45 @@
   background: #fafafa;
 }
 
+.footer {
+  margin-top: 2em;
+  background: #0e0e0e;
+  min-height: 300px;
+  position: absolute;
+  left: 0px;
+  width: 100%;
+  color: #fafafa;
+  font-size: 0.75em;
+}
+
+.footerContent {
+  width: 960px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.footerSection > h1 {
+  color: #fafafa;
+  border-bottom: 1px solid #fafafa;
+}
+
+.footerLogo {
+  width: 100%;
+}
+
+.full {
+  min-width: 100%;
+  margin-left: 1em;
+  margin-right: 1em;
+}
+.third {
+  min-width: calc(33.333% - 2em);
+  margin-left: 1em;
+  margin-right: 1em;
+}
+
 .title {
   flex-grow: 2;
   margin-left: 1em;

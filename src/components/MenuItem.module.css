@@ -14,6 +14,7 @@
   padding-bottom: 0.3em;
   text-decoration: none;
   max-width: 33%;
+  min-width: 165px;
 }
 
 .MenuItem:link, .MenuItem:visited {
@@ -21,7 +22,7 @@
 }
 
 .MenuItem:hover {
-  color: #2F3D5A;
+  color: var(--color-primary);
 }
 
 .MenuItem:hover .title {
@@ -40,6 +41,10 @@
   display: block;
   font-size: 0.8em;
   opacity: 0.5;
+}
+
+.MenuItem:hover .description {
+  opacity: 1;
 }
 
 .content {

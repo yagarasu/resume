@@ -15,7 +15,7 @@ import unitecLogo from '../../assets/unitec.png'
 import cemLogo from '../../assets/cem.png'
 import ahLogo from '../../assets/logo.svg'
 import styles from './Resume.module.css'
-import {  } from '@fortawesome/free-solid-svg-icons'
+import SocialIcons from '../../components/SocialIcons'
 import {
   faHammer,
   faFileInvoice,
@@ -64,7 +64,8 @@ const ResumePage = props => {
       </div>
       <div className={cx('third')}>
         <Section className={cx('small', 'no-title')}>
-          <p>I am open for the next challenge where I could keep writing code in the latest technologies to build amazing products alongside great developers. And after a year working from home with great success for both my current employer and myself, I expect to keep working remotely.</p>
+          <SocialIcons size="2x" />
+          {/* <p>I am open for the next challenge where I could keep writing code in the latest technologies to build amazing products alongside great developers. And after a year working from home with great success for both my current employer and myself, I expect to keep working remotely.</p> */}
         </Section>
       </div>
       <hr className={cx('full')} />
@@ -349,6 +350,7 @@ const ResumePage = props => {
             />
           </Timeline>
         </Section>
+        <hr className={cx('full')} />
       </div>
     </div>
   )
