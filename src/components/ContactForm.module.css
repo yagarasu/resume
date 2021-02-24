@@ -3,6 +3,10 @@
   flex-direction: column;
 }
 
+.form.STATE_DONE .submit {
+  background: #78e06f;
+}
+
 .field {
   border: 1px solid #fafafa;
   background: transparent;
@@ -23,4 +27,31 @@ textarea.field {
   color: #0e0e0e;
   padding: 0.5em 1em 0.5em 1em;
   font-size: 1.5em;
+}
+
+.done {
+  color: #fafafa;
+  font-size: 1.2em;
+  margin-bottom: 1em;
+}
+
+.error {
+  color: #dd4949;
+  font-size: 1.2em;
+  margin-bottom: 1em;
+}
+
+.debounce {
+  color: #fafafa;
+  font-size: 1.2em;
+  margin-bottom: 1em;
+}
+
+.validation-error {
+  color: #dd4949;
+  margin-bottom: 1em;
+}
+
+.done p, .error p {
+  margin: 0px;
 }
