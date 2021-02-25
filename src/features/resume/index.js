@@ -57,13 +57,13 @@ const cx = classnames.bind(styles)
 const ResumePage = props => {
   return (
     <div className={cx('Resume')}>
-      <div className={cx('two-thirds')}>
+      <div className={cx('two-thirds', 'tab-full')}>
         <Section title="Summary" icon={faFileInvoice} className={cx('big')}>
           <p>I am a <strong>Web Developer</strong> specialized in <strong>Frontend</strong> (but capable of doing Backend) based in <strong>Queretaro, Mexico</strong>. I have more than <strong>10 years</strong> of experience working with user facing and internal apps, websites and tools. I majored in <strong>Graphic Design</strong>, but I have been a <strong>passionate developer</strong> since my hands first touched a keyboard as a kid.</p>
         </Section>
       </div>
-      <div className={cx('third')}>
-        <Section className={cx('small', 'no-title')}>
+      <div className={cx('third', 'tab-full')}>
+        <Section className={cx('small', 'no-title', 'social')}>
           <SocialIcons size="2x" />
           {/* <p>I am open for the next challenge where I could keep writing code in the latest technologies to build amazing products alongside great developers. And after a year working from home with great success for both my current employer and myself, I expect to keep working remotely.</p> */}
         </Section>

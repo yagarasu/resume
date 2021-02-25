@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import PropTypes from 'prop-types'
 import useCollapse from 'react-collapsed'
 import styles from './ViewMore.module.css'

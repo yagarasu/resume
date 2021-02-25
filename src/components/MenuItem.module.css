@@ -55,3 +55,17 @@
 .icon {
   margin-right: 16px;
 }
+
+@media screen and (max-width: 768px) {
+  .MenuItem {
+    border-left-width: 1px;
+    font-weight: normal;
+    min-width: 0;
+  }
+  .description {
+    display: none;
+  }
+  .icon {
+    font-size: 1em;
+  }
+}

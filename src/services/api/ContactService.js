@@ -1,10 +1,10 @@
 class ContactService {
-  constructor(ApiClient) {
+  constructor({ ApiClient }) {
     this.client = ApiClient
   }
 
-  sendContactForm() {
-
+  sendContactForm(values) {
+    return this.client.fetch('/contact', 'POST', values)
   }
 }
 

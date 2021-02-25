@@ -1,9 +1,9 @@
-import awilix, { asClass } from 'awilix'
+import { createContainer, asClass } from 'awilix'
 import ApiClient from './api/ApiClient'
 import ContactService from './api/ContactService'
 
 function buildContainer() {
-  const container = awilix.createContainer()
+  const container = createContainer()
   container.register({
     ApiClient: asClass(ApiClient).singleton(),
     ContactService: asClass(ContactService).singleton()

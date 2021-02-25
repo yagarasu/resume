@@ -63,3 +63,12 @@
 .no-title {
   padding-top: 4em
 }
+
+@media screen and (max-width: 768px) {
+  .tab-full {
+    width: 100%;
+  }
+  .social {
+    padding-top: 0;
+  }
+}

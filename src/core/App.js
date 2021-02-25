@@ -11,12 +11,14 @@ function App() {
   return (
     <div className={styles.App}>
       <header className={styles.header}>
-        <img src={logo} alt="Alexys Hegmann Web Developer" />
-        <div className={styles.title}>
-          <h1>Alexys Hegmann</h1>
-          <h2>Web Developer</h2>
+        <div className={styles.logoArea}>
+          <img src={logo} alt="Alexys Hegmann Web Developer" />
+          <div className={styles.title}>
+            <h1>Alexys Hegmann</h1>
+            <h2>Web Developer</h2>
+          </div>
         </div>
-        <Menu />
+        <Menu className={styles.menu} />
       </header>
       <main className={styles.content}>
         <Switch>

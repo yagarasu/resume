@@ -16,6 +16,12 @@
   padding: 1em 0em 1em 1em;
   border-bottom: 1px solid #e0e0e0;
   background: #fafafa;
+  box-sizing: border-box;
+}
+
+.logoArea {
+  display: flex;
+  flex-direction: row;
 }
 
 .footer {
@@ -50,4 +56,29 @@
 
 .content {
   margin-top: 115px;
+}
+
+@media screen and (max-width: 768px) {
+  .App {
+    width: 100%;
+    margin: auto;
+  }
+  .header {
+    padding: 0.5em 1em 0.5em 1em;
+  }
+  .title h1 {
+    font-size: 1.2em;
+  }
+  .title h2 {
+    font-size: 0.9em;
+  }
+  .logoArea > img {
+    max-height: 2.5em;
+  }
+  .menu {
+    flex-shrink: 2;
+  }
+  .content {
+    margin-top: 75px;
+  }
 }

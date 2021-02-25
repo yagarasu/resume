@@ -4,8 +4,9 @@ import classnames from 'classnames/bind'
 import useLocalStorage from 'react-use-localstorage'
 import { Form, Field } from 'react-final-form'
 import { FontAwesomeIcon as Icon } from '@fortawesome/react-fontawesome'
-import styles from './ContactForm.module.css'
 import { faPaperPlane, faSpinner, faCheck, faExclamationTriangle } from '@fortawesome/free-solid-svg-icons'
+import styles from './ContactForm.module.css'
+import useService from '../services/useService'
 
 const cx = classnames.bind(styles)
 
@@ -38,17 +39,18 @@ const STATE_DONE = 'STATE_DONE'
 const STATE_ERROR = 'STATE_ERROR'
 const STATE_DEBOUNCE = 'STATE_DEBOUNCE'
 
-const ContactForm = ({ onSubmit = () => {} }) => {
+const ContactForm = () => {
   const [contactSent, setContactSent] = useLocalStorage("contact", null)
   const [state, setState] = useState(STATE_INIT)
-  const hndSubmit = async (...args) => {
+  const { ContactService } = useService(['ContactService'])
+  const hndSubmit = async values => {
     setState(STATE_BUSY)
     try {
       if ((Date.now() - contactSent) < 1000 * 60 * 60 * 8) {
         setState(STATE_DEBOUNCE)
         return
       }
-      await onSubmit(...args)
+      await ContactService.sendContactForm(values)
       setState(STATE_DONE)
       setContactSent(Date.now())
     } catch (e) {
@@ -67,15 +69,13 @@ const ContactForm = ({ onSubmit = () => {} }) => {
             </div>
           ) : state === STATE_DONE ? (
             <div className={cx('done')}>
-              <p>Your message has been sent.</p>
-              <p>Thank you for your interest.</p>
+              <p>Your message has been sent. Thank you for your interest.</p>
             </div>
           ) : (
             <>
               {state === STATE_ERROR && (
                 <div className={cx('error')}>
-                  <p>There was a problem sending the message.</p>
-                  <p>Please try again.</p>
+                  <p><Icon icon={faExclamationTriangle} /> There was a problem sending the message. Please try again.</p>
                 </div>
               )}
               <Field name="name">
@@ -111,10 +111,6 @@ const ContactForm = ({ onSubmit = () => {} }) => {
       )}
     </Form>
   )
-}
-
-ContactForm.propTypes = {
-  onSubmit: PropTypes.func
 }
 
 export default ContactForm
