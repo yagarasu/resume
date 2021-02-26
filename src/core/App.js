@@ -1,25 +1,15 @@
 import { Route, Switch } from 'react-router-dom'
-import Menu from './Menu'
 import styles from './App.module.css'
-import logo from '../assets/logo.svg'
 import ResumePage from '../features/resume'
 import BlogPage from '../features/blog'
 import ProjectsPage from '../features/projects'
 import Footer from '../components/Footer'
+import Header from '../components/Header'
 
 function App() {
   return (
     <div className={styles.App}>
-      <header className={styles.header}>
-        <div className={styles.logoArea}>
-          <img src={logo} alt="Alexys Hegmann Web Developer" />
-          <div className={styles.title}>
-            <h1>Alexys Hegmann</h1>
-            <h2>Web Developer</h2>
-          </div>
-        </div>
-        <Menu className={styles.menu} />
-      </header>
+      <Header />
       <main className={styles.content}>
         <Switch>
           <Route path="/" exact>
