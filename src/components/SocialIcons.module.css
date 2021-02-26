@@ -31,3 +31,16 @@
 .expanded > a > span {
   margin-left: 1em;
 }
+
+@media screen and (max-width: 768px) {
+  .SocialIcons {
+    font-size: 1.5em;
+    justify-content: space-around;
+  }
+  .expanded {
+    justify-content: space-between;
+  }
+  .expanded > a {
+    font-size: 1.5em;
+  }
+}

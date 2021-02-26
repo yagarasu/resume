@@ -30,4 +30,10 @@
   .footerContent {
     width: calc(100% - 2em);
   }
+  .third {
+    min-width: calc(50% - 2em);
+  }
+  .third:nth-child(3) {
+    display: none;
+  }
 }

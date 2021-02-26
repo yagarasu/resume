@@ -12,3 +12,9 @@
 .icon {
   margin-right: 1em;
 }
+
+@media screen and (max-width: 768px) {
+  .button {
+    padding: 1em;
+  }
+}

@@ -55,3 +55,15 @@ textarea.field {
 .done p, .error p {
   margin: 0px;
 }
+
+@media screen and (max-width: 768px) {
+  .field {
+    font-size: 1.5em;
+  }
+  .error, .done, .debounce, .validation-error {
+    font-size: 1.5em;
+  }
+  .submit {
+    padding: 1em;
+  }
+}
