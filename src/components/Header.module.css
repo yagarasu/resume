@@ -45,6 +45,17 @@
   .header {
     height: 76px;
   }
+  .title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .title h1 {
+    font-size: 1.5em;
+  }
+  .title h2 {
+    font-size: 1em;
+  }
   .menu {
     display: none;
   }

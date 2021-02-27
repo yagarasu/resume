@@ -64,11 +64,57 @@
   padding-top: 4em
 }
 
-@media screen and (max-width: 768px) {
+.section-education-sidebar {
+  display: block;
+}
+.section-education-main {
+  display: none;
+}
+
+@media screen and (min-width: 0px) and (max-width: 600px) {
   .tab-full {
     width: 100%;
   }
   .social {
     padding-top: 0;
+  }
+  .half {
+    width: calc(100% - 2em);
+    margin-left: 1em;
+    margin-right: 1em;
+    display: flex;
+    flex-direction: column;
+  }
+  .b-left {
+    border-left: 0px;
+    padding-left: 0em;
+  }
+  .section-experience {
+    order: 2;
+  }
+  .section-education-sidebar {
+    display: none;
+  }
+  .section-education-main {
+    display: block;
+  }
+  .soft-skills > ul > li {
+    width: calc(50% - 1em);
+    margin-bottom: 1em;
+  }
+}
+
+@media screen and (min-width: 599px) and (max-width: 961px) {
+  .tab-full {
+    width: 100%;
+  }
+  .social {
+    padding-top: 0;
+  }
+  .section-education-sidebar {
+    display: block;
+  }
+  .section-education-main {
+    display: none;
   }
 }

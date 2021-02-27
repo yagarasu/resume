@@ -14,3 +14,10 @@
 .icon {
   margin-right: 1em;
 }
+
+@media screen and (min-width: 0px) and (max-width: 600px) {
+  .title {
+    font-size: 1.2em;
+    font-weight: normal;
+  }
+}

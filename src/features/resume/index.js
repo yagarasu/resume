@@ -38,7 +38,7 @@ import {
   faChalkboardTeacher,
   faBrain,
   faUserTie,
-  faUserCheck
+  faLaptopHouse
 } from '@fortawesome/free-solid-svg-icons'
 import {
   faJs,
@@ -54,22 +54,42 @@ import {
 
 const cx = classnames.bind(styles)
 
+const Education = ({ className }) => (
+  <Section title="Education" icon={faGraduationCap} className={cx('section-education', className)}>
+          <Timeline>
+            <TimelineItem
+              title="Bachelor's Degree, Graphic Design"
+              subtitle="Technological University of Mexico"
+              dateStart={moment('2006-09')}
+              dateEnd={moment('2010-04')}
+              icon={<img src={unitecLogo} style={{ width: '50px', height: '50px', borderRadius: '50%' }} alt="unitec" />}
+            />
+            <TimelineItem
+              title="Technical Course, Graphic Design"
+              subtitle="Montreal Education Center (Mexico)"
+              dateStart={moment('2003-09')}
+              dateEnd={moment('2006-06')}
+              icon={<img src={cemLogo} style={{ width: '50px', height: '50px', borderRadius: '50%' }} alt="C.E.M." />}
+            />
+          </Timeline>
+        </Section>
+)
+
 const ResumePage = props => {
   return (
     <div className={cx('Resume')}>
-      <div className={cx('two-thirds', 'tab-full')}>
+      <div className={cx('two-thirds', 'tab-full', 'section-summary')}>
         <Section title="Summary" icon={faFileInvoice} className={cx('big')}>
           <p>I am a <strong>Web Developer</strong> specialized in <strong>Frontend</strong> (but capable of doing Backend) based in <strong>Queretaro, Mexico</strong>. I have more than <strong>10 years</strong> of experience working with user facing and internal apps, websites and tools. I majored in <strong>Graphic Design</strong>, but I have been a <strong>passionate developer</strong> since my hands first touched a keyboard as a kid.</p>
         </Section>
       </div>
-      <div className={cx('third', 'tab-full')}>
+      <div className={cx('third', 'tab-full', 'section-social')}>
         <Section className={cx('small', 'no-title', 'social')}>
           <SocialIcons size="2x" />
-          {/* <p>I am open for the next challenge where I could keep writing code in the latest technologies to build amazing products alongside great developers. And after a year working from home with great success for both my current employer and myself, I expect to keep working remotely.</p> */}
         </Section>
       </div>
       <hr className={cx('full')} />
-      <div className={cx('half')}>
+      <div className={cx('half', 'section-experience')}>
         <Section title="Experience" icon={faBriefcase} >
           <Timeline>
             <TimelineItem
@@ -86,6 +106,7 @@ const ResumePage = props => {
                 <li>Worked on a Newsletter building and delivering system using Symfony 5, MySQL and ElasticSearch.</li>
                 <li>Created an admin app for this content aggregator using React Admin and Material-UI.</li>
                 <li>Mentored a couple of junior developers to help them deliver more maintainable, decoupled code with better practices.</li>
+                <li>Worked from home since March 2020 with great success for both my current employer and myself.</li>
               </ul>
               <Accordion title="Tech used" icon={faMicrochip}>
                 <SkillList compact items={[
@@ -136,7 +157,7 @@ const ResumePage = props => {
             <TimelineItem
               title="Freelance"
               dateStart={moment('2014-02')}
-              dateEnd={moment('2013-09')}
+              dateEnd={moment('2015-02')}
               icon={<img src={ahLogo} style={{ width: '50px', height: '50px', borderRadius: '50%', background: '#f1f1f1' }} alt="unidep" />}
             >
               <ul>
@@ -167,8 +188,8 @@ const ResumePage = props => {
                 title="Digital Marketing Manager"
                 subtitle="Professional Develoment University"
                 subtitleLink="https://unidep.mx/"
-                dateStart={moment('2014-02')}
-                dateEnd={moment('2013-09')}
+                dateStart={moment('2013-09')}
+                dateEnd={moment('2014-02')}
                 icon={<img src={unidepLogo} style={{ width: '50px', height: '50px', borderRadius: '50%' }} alt="unidep" />}
               >
                 <ul>
@@ -195,7 +216,7 @@ const ResumePage = props => {
                 title="Web Development Coordinator"
                 subtitle="Professional Develoment University"
                 subtitleLink="https://unidep.mx/"
-                dateStart={moment('2014-02')}
+                dateStart={moment('2012-03')}
                 dateEnd={moment('2013-09')}
                 icon={<img src={unidepLogo} style={{ width: '50px', height: '50px', borderRadius: '50%' }} alt="unidep" />}
               >
@@ -221,8 +242,8 @@ const ResumePage = props => {
                 title="Web Programmer"
                 subtitle="Professional Develoment University"
                 subtitleLink="https://unidep.mx/"
-                dateStart={moment('2014-02')}
-                dateEnd={moment('2013-09')}
+                dateStart={moment('2011-02')}
+                dateEnd={moment('2012-03')}
                 icon={<img src={unidepLogo} style={{ width: '50px', height: '50px', borderRadius: '50%' }} alt="unidep" />}
               >
                 <ul>
@@ -244,8 +265,8 @@ const ResumePage = props => {
                 title="Internship"
                 subtitle="Technological University of Mexico"
                 subtitleLink="https://unitec.mx/"
-                dateStart={moment('2014-02')}
-                dateEnd={moment('2013-09')}
+                dateStart={moment('2010-04')}
+                dateEnd={moment('2010-12')}
                 icon={<img src={unitecLogo} style={{ width: '50px', height: '50px', borderRadius: '50%' }} alt="unitec" />}
               >
                 <ul>
@@ -267,8 +288,9 @@ const ResumePage = props => {
             </ViewMore>
           </Timeline>
         </Section>
+        <Education className={cx('section-education-main')} />
       </div>
-      <div className={cx('half')}>
+      <div className={cx('half', 'section-sidebar')}>
         <Section title="Skills" icon={faHammer} className={cx('b-left')}>
             <h2 className={cx('subtitle')}>Frontend</h2>
             <SkillList items={[
@@ -302,14 +324,15 @@ const ResumePage = props => {
             ]} />
         </Section>
         <hr className={cx('full')} />
-        <Section title="Soft Skills" icon={faHandsHelping} className={cx('b-left')}>
+        <Section title="Soft Skills" icon={faHandsHelping} className={cx('b-left', 'soft-skills')}>
           <SkillList items={[
               { name: 'Willingness to learn', icon: faGraduationCap, description: 'New tech, new frameworks, new skills, even new languages' },
               { name: 'Mentorship', icon: faChalkboardTeacher, description: 'I love to share what I\'ve learned in the past 10 years' },
               { name: 'Organized', icon: faTasks, description: 'From task lists to kanban; I have a couple of tricks under my sleeve' },
               { name: 'Problem Solving', icon: faBrain, description: 'From initial requirements analysis to prod troubleshooting' },
               { name: 'Integrity', icon: faUserTie, description: 'The truth is my compass' },
-              { name: 'Responsible', icon: faUserCheck, description: 'Fulfilling my duties and going above and beyond' }
+              { name: 'Remote work', icon: faLaptopHouse, description: 'Self driven and good at communicating with remote coworkers' }
+              // { name: 'Responsible', icon: faUserCheck, description: 'Fulfilling my duties and going above and beyond' }
             ]} />
         </Section>
         <hr className={cx('full')} />
@@ -332,24 +355,7 @@ const ResumePage = props => {
           ]} />
         </Section>
         <hr className={cx('full')} />
-        <Section title="Education" icon={faGraduationCap}>
-          <Timeline>
-            <TimelineItem
-              title="Bachelor's Degree, Graphic Design"
-              subtitle="Technological University of Mexico"
-              dateStart={moment('2019-05')}
-              dateEnd="present"
-              icon={<img src={unitecLogo} style={{ width: '50px', height: '50px', borderRadius: '50%' }} alt="unitec" />}
-            />
-            <TimelineItem
-              title="Technical Course, Graphic Design"
-              subtitle="Montreal Education Center (Mexico)"
-              dateStart={moment('2019-05')}
-              dateEnd="present"
-              icon={<img src={cemLogo} style={{ width: '50px', height: '50px', borderRadius: '50%' }} alt="C.E.M." />}
-            />
-          </Timeline>
-        </Section>
+        <Education className={cx('section-education-sidebar')} />
         <hr className={cx('full')} />
       </div>
     </div>
