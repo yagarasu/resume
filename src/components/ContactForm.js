@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import PropTypes from 'prop-types'
 import classnames from 'classnames/bind'
 import useLocalStorage from 'react-use-localstorage'
 import { Form, Field } from 'react-final-form'

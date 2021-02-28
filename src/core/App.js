@@ -15,7 +15,7 @@ function App() {
           <Route path="/" exact>
             <ResumePage />
           </Route>
-          <Route path="/blog" exact>
+          <Route path="/blog">
             <BlogPage />
           </Route>
           <Route path="/projects" exact>
