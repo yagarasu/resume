@@ -52,3 +52,31 @@
   height: 60px;
   font-size: 2em;
 }
+
+@media screen and (min-width: 0px) and (max-width: 600px) {
+  .article {
+    max-width: 100%;
+    height: 100%;
+  }
+  .close {
+    top: 0.5em;
+    right: 0.5em;
+    width: 60px;
+    height: 60px;
+    font-size: 2em;
+  }
+}
+
+@media screen and (min-width: 599px) and (max-width: 961px) {
+  .article {
+    max-width: 95%;
+    height: 95%;
+  }
+  .close {
+    top: 1em;
+    right: 1em;
+    width: 60px;
+    height: 60px;
+    font-size: 2em;
+  }
+}
