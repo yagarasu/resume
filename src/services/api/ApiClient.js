@@ -1,18 +1,11 @@
-import axios from 'axios'
+import DirectusSDK from "@directus/sdk-js"
 
 class ApiClient {
   constructor() {
-    this.client = axios.create({
-      baseURL: process.env.REACT_APP_API_URL
-    })
-  }
-
-  fetch(url, method = 'GET', data = null, extra = {}) {
-    return this.client.request({
-      url,
-      method,
-      data,
-      ...extra
+    this.client = new DirectusSDK({
+      url: process.env.REACT_APP_API_URL,
+      project: process.env.REACT_APP_API_PROJECT,
+      storage: window.localStorage
     })
   }
 }
