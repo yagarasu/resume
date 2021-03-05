@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import classnames from 'classnames/bind'
+import { FontAwesomeIcon as Icon } from '@fortawesome/react-fontawesome'
+import { faSpinner } from '@fortawesome/free-solid-svg-icons'
 import useService from '../../services/useService'
 import styles from './Projects.module.css'
 
@@ -34,11 +36,19 @@ const ProjectsPage = props => {
   }, [])
   return (
     <div className={cx('projects')}>
-      {state.projects.map(({ id, title, description, url, image }) => (
+      {state.loading && (
+        <div className={cx('spinner')}><Icon icon={faSpinner} size="3x" spin /></div>
+      )}
+      {state.projects.map(({ id, title, description, url, image, links }) => (
         <article key={id}>
           <img src={image} className={cx('image')} alt={title} />
           <h1><a href={url}>{title}</a></h1>
           <div>{description}</div>
+          <ul className={cx('links')}>
+            {links.map(({ label, link, icon }) => (
+              <li key={label} className={cx('link')}><a href={link} target="_blank" rel="noreferrer">{label}</a></li>
+            ))}
+          </ul>
         </article>
       ))}
     </div>
