@@ -4,7 +4,7 @@ class ContactService {
   }
 
   sendContactForm(values) {
-    return this.client.fetch('/contact', 'POST', values)
+    return this.client.fetch('/items/contact', 'POST', values)
   }
 }
 
