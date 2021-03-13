@@ -2,9 +2,8 @@ import axios from 'axios'
 
 class ApiClient {
   constructor() {
-    this.project = process.env.REACT_APP_API_PROJECT
     this.client = axios.create({
-      baseURL: process.env.REACT_APP_API_URL + '/' + this.project
+      baseURL: process.env.REACT_APP_API_URL
     })
   }
 
@@ -15,6 +14,10 @@ class ApiClient {
       data,
       ...extra
     })
+  }
+
+  buildImageUrl(filename) {
+    return `${process.env.REACT_APP_API_URL}/assets/${filename}`
   }
 }
 

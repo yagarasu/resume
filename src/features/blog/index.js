@@ -49,6 +49,11 @@ const BlogPage = props => {
         hasMore={state.total === null || state.total > state.articles.length}
         onLoadMore={hndLoadMore}
       >
+        {!state.loading && state.articles.length === 0 && (
+          <div>
+            <h2>No articles found</h2>
+          </div>
+        )}
         {state.articles.map(({ id, title, date, teaser, image }) => (
           <article className={cx('article')} key={id}>
             <header>

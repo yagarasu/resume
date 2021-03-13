@@ -9,19 +9,19 @@ class ProjectsService {
     const { image, ...rest } = project
     return {
       ...rest,
-      image: image.data.full_url
+      image: this.client.buildImageUrl(image)
     }
   }
 
-  async list(page) {
+  async list(page = 0) {
     const limit = PER_PAGE
-    const offset = (page - 1) * PER_PAGE
-    const fields = '*,image.data.*'
-    const meta = 'total_count,status_count'
-    const res = await this.client.fetch(`/items/projects?limit=${limit}&offset=${offset}&fields=${fields}&meta=${meta}`, 'GET')
+    const offset = ((page - 1) * PER_PAGE) || 0
+    const filter = '&filter[status][_eq]=published'
+    const meta = 'filter_count'
+    const res = await this.client.fetch(`/items/project?limit=${limit}&offset=${offset}${filter}&meta=${meta}`, 'GET')
 
-    const projects = res.data.data.map(this.normalize)
-    const total = res.data.meta.total_count
+    const projects = res.data.data.map(this.normalize.bind(this))
+    const total = res.data.meta.fitler_count
 
     return {
       projects,

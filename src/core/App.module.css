@@ -1,5 +1,6 @@
 .App {
   width: 960px;
+  min-height: 100vh;
   margin: auto;
 }
 
@@ -32,7 +33,7 @@
 }
 
 .content {
-  margin-top: 115px;
+  padding-top: 115px;
 }
 
 @media screen and (min-width: 0px) and (max-width: 600px) {
@@ -44,7 +45,7 @@
     padding: 0.5em 1em 0.5em 1em;
   }
   .content {
-    margin-top: 75px;
+    padding-top: 75px;
   }
 }
 

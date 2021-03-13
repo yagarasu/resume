@@ -39,15 +39,22 @@ const ProjectsPage = props => {
       {state.loading && (
         <div className={cx('spinner')}><Icon icon={faSpinner} size="3x" spin /></div>
       )}
+      {!state.loading && state.projects.length === 0 && (
+        <div>
+          <h2>No projects found</h2>
+        </div>
+      )}
       {state.projects.map(({ id, title, description, url, image, links }) => (
         <article key={id}>
           <img src={image} className={cx('image')} alt={title} />
           <h1><a href={url}>{title}</a></h1>
           <div>{description}</div>
           <ul className={cx('links')}>
-            {links.map(({ label, link, icon }) => (
-              <li key={label} className={cx('link')}><a href={link} target="_blank" rel="noreferrer">{label}</a></li>
-            ))}
+            {links.map(({ label, url }) => {
+              return (
+                <li key={label} className={cx('link')}><a href={url} target="_blank" rel="noreferrer">{label}</a></li>
+              )
+            })}
           </ul>
         </article>
       ))}
