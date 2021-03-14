@@ -48,7 +48,7 @@ const ProjectsPage = props => {
         <article key={id}>
           <img src={image} className={cx('image')} alt={title} />
           <h1><a href={url}>{title}</a></h1>
-          <div>{description}</div>
+          <div className={cx('description')}>{description}</div>
           <ul className={cx('links')}>
             {links.map(({ label, url }) => {
               return (

@@ -8,6 +8,10 @@
   margin: 1em;
 }
 
+.description {
+  white-space: pre-wrap;
+}
+
 .image {
   width: 100%;
   height: 200px;
