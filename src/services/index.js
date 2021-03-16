@@ -1,16 +1,18 @@
 import { createContainer, asClass } from 'awilix'
 import ApiClient from './api/ApiClient'
-import ContactService from './api/ContactService'
 import PostsService from './api/PostsService'
 import ProjectsService from './api/ProjectsService'
+import ContactClient from './contact/ContactClient'
+import ContactService from './contact/ContactService'
 
 function buildContainer() {
   const container = createContainer()
   container.register({
     ApiClient: asClass(ApiClient).singleton(),
-    ContactService: asClass(ContactService).singleton(),
     PostsService: asClass(PostsService).singleton(),
-    ProjectsService: asClass(ProjectsService).singleton()
+    ProjectsService: asClass(ProjectsService).singleton(),
+    ContactClient: asClass(ContactClient).singleton(),
+    ContactService: asClass(ContactService).singleton()
   })
   window.di = container
   return container
