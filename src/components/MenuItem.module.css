@@ -64,9 +64,9 @@
     font-size: 0.60em;
   }
 
-.icon {
-  margin-right: 0.5em;
-}
+  .icon {
+    margin-right: 0.5em;
+  }
 }
 
 @media screen and (min-width: 599px) and (max-width: 961px) {

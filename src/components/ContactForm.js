@@ -61,7 +61,7 @@ const ContactForm = () => {
   return (
     <Form onSubmit={hndSubmit} validate={validate}>
       {({ handleSubmit, ...props }) => (
-        <form onSubmit={handleSubmit} className={cx('form', state)}>
+        <form onSubmit={handleSubmit} className={cx('form', state)} id="contact">
           {state === STATE_DEBOUNCE ? (
             <div className={cx('debounce')}>
               <p><Icon icon={faExclamationTriangle} /> You already sent the contact form before. Give me a couple of hours to catch up on my e-mail and I'll reply as soon as possible.</p>

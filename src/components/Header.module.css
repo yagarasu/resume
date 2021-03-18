@@ -79,7 +79,7 @@
   }
   .mobileMenu-menu {
     flex-direction: column;
-    font-size: 2em;
+    font-size: 1.5em;
     justify-content: space-around;
     margin-left: 0.5em;
   }

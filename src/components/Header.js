@@ -23,7 +23,7 @@ const Header = props => {
       </button>
       {open && (
         <Portal className={styles['mobileMenu-portal']}>
-          <Menu className={styles['mobileMenu-menu']} />
+          <Menu className={styles['mobileMenu-menu']} onClick={() => setOpen(false)} />
         </Portal>
       )}
     </header>

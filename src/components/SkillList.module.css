@@ -25,7 +25,15 @@
   font-size: 0.7em;
 }
 
-@media screen and (min-width: 0px) and (max-width: 600px) {
+@media screen and (min-width: 0px) and (max-width: 360px) {
+  .item {
+    margin: 0px;
+    width: calc(50% - 1em);
+    margin-bottom: 1em;
+  }
+}
+
+@media screen and (min-width: 361px) and (max-width: 600px) {
   .compact .item {
     width: calc(50% - 1em);
   }
