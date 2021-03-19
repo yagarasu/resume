@@ -12,10 +12,10 @@ import ViewMore from '../../components/ViewMore'
 import pslLogo from '../../assets/psl.png'
 import unidepLogo from '../../assets/unidep.png'
 import unitecLogo from '../../assets/unitec.png'
-import cemLogo from '../../assets/cem.png'
 import ahLogo from '../../assets/logo.svg'
 import styles from './Resume.module.css'
 import SocialIcons from '../../components/SocialIcons'
+import { FontAwesomeIcon as Icon } from '@fortawesome/react-fontawesome'
 import {
   faHammer,
   faFileInvoice,
@@ -38,7 +38,8 @@ import {
   faChalkboardTeacher,
   faBrain,
   faUserTie,
-  faLaptopHouse
+  faLaptopHouse,
+  faSchool
 } from '@fortawesome/free-solid-svg-icons'
 import {
   faJs,
@@ -69,7 +70,8 @@ const Education = ({ className }) => (
               subtitle="Montreal Education Center (Mexico)"
               dateStart={moment('2003-09')}
               dateEnd={moment('2006-06')}
-              icon={<img src={cemLogo} style={{ width: '50px', height: '50px', borderRadius: '50%' }} alt="C.E.M." />}
+              icon={<Icon icon={faSchool} size="2x" />}
+              className={cx('edu-cem')}
             />
           </Timeline>
         </Section>

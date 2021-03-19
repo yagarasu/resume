@@ -71,6 +71,11 @@
   display: none;
 }
 
+.edu-cem > div {
+  background: #1c6bb7;
+  color: #f1f1f1;
+}
+
 @media screen and (min-width: 0px) and (max-width: 600px) {
   .tab-full {
     width: 100%;

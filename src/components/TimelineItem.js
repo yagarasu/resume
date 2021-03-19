@@ -15,13 +15,14 @@ const TimelineItem = ({
   dateStart,
   dateEnd,
   icon,
-  children
+  children,
+  className
 }) => {
   const dateFormat = date => typeof date === 'string' ? date : date.format('MMM YYYY')
   const startStr = dateFormat(dateStart)
   const endStr = dateFormat(dateEnd)
   return (
-    <div className={cx('TimelineItem')}>
+    <div className={cx('TimelineItem', className)}>
       <h2>{title}</h2>
       <h3>
         {
