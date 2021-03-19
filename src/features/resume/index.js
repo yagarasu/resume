@@ -103,7 +103,7 @@ const ResumePage = props => {
               icon={<img src={pslLogo} style={{ width: '50px', height: '50px', borderRadius: '50%' }} alt="P/S/L Group" />}
             >
               <ul>
-                <li>Main developer in the rebuild of a large content aggregator app serving tens of thousands of users using React, Redux, Redux Saga and Awilix.</li>
+                <li>Main frontend developer in the rebuild of a large content aggregator app serving tens of thousands of users using React, Redux, Redux Saga and Awilix.</li>
                 <li>Participated in the construction of the Backend for the same app using Symfony 5, MySQL and ElasticSearch.</li>
                 <li>Worked on a Newsletter building and delivering system using Symfony 5, MySQL and ElasticSearch.</li>
                 <li>Created an admin app for this content aggregator using React Admin and Material-UI.</li>
@@ -162,6 +162,7 @@ const ResumePage = props => {
               dateEnd={moment('2015-02')}
               icon={<img src={ahLogo} style={{ width: '50px', height: '50px', borderRadius: '50%', background: '#f1f1f1' }} alt="unidep" />}
             >
+              <p>On and off since 2006, but I tried to be a full time freelance in this period.</p>
               <ul>
                 <li>Developed WordPress based websites for different small and medium sized companies and groups.</li>
                 <li>Developed an embeddable cost calculator for a University as a conversion tool integrating with HubSpot API and an internal tool via SOAP.</li>
