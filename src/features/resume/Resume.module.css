@@ -123,3 +123,32 @@
     display: none;
   }
 }
+
+@media print {
+  .section-experience {
+    width: calc(66.666% - 2em);
+  }
+  .section-sidebar {
+    width: calc(33.333% - 2em);
+  }
+  .social > div {
+    flex-direction: column;
+    font-size: 9pt;
+  }
+  .social > div > a {
+    margin-bottom: 1em;
+  }
+  .social > div > a::after {
+    content: attr(href);
+    margin-left: 0.5em;
+  }
+  .section-education-sidebar {
+    break-inside: avoid;
+  }
+  .section-education-sidebar > h1 {
+    break-before: always;
+  }
+  .accordion {
+    display: none;
+  }
+}

@@ -59,3 +59,9 @@
   line-height: 2;
   color: #424242;
 }
+
+@media print {
+  .TimelineItem {
+    break-inside: avoid;
+  }
+}

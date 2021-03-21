@@ -112,3 +112,16 @@
     padding: 0.5em 1em 0.5em 1em;
   }
 }
+
+@media print {
+  .header {
+    position: relative;
+    justify-content: flex-end;
+  }
+  .mobileMenu-button {
+    display: none;
+  }
+  .menu {
+    display: none;
+  }
+}

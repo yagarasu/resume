@@ -13,3 +13,9 @@
 .link {
   margin-left: 1em;
 }
+
+@media print {
+  .link {
+    display: none;
+  }
+}

@@ -110,7 +110,7 @@ const ResumePage = props => {
                 <li>Mentored a couple of junior developers to help them deliver more maintainable, decoupled code with better practices.</li>
                 <li>Worked from home since March 2020 with great success for both my current employer and myself.</li>
               </ul>
-              <Accordion title="Tech used" icon={faMicrochip}>
+              <Accordion title="Tech used" icon={faMicrochip} className={cx('accordion')}>
                 <SkillList compact items={[
                   { name: 'Javascript', icon: faJs },
                   { name: 'React', icon: faReact },
@@ -139,7 +139,7 @@ const ResumePage = props => {
                 <li>Worked on a survey generation and data visualization application using Symfony 2, MySQL, Google Charts, dynamic SVG via javascript and a prototype using D3.js.</li>
                 <li>Maintained a dozen or so content aggregator websites in Drupal 7 and a legacy website in Drupal 5.</li>
               </ul>
-              <Accordion title="Tech used" icon={faMicrochip}>
+              <Accordion title="Tech used" icon={faMicrochip} className={cx('accordion')}>
                 <SkillList compact items={[
                   { name: 'Javascript', icon: faJs },
                   { name: 'React', icon: faReact },
@@ -169,7 +169,7 @@ const ResumePage = props => {
                 <li>Developed a CLI command to transform addresses in Excel files to geolocation points using Google geocoder.</li>
                 <li>Developed the prototype of a data visualization tool using D3.js, React, Node, MongoDB and ElasticSearch.</li>
               </ul>
-              <Accordion title="Tech used" icon={faMicrochip}>
+              <Accordion title="Tech used" icon={faMicrochip} className={cx('accordion')}>
                 <SkillList compact items={[
                   { name: 'PHP', icon: faPhp },
                   { name: 'WordPress', icon: faWordpress },
@@ -201,7 +201,7 @@ const ResumePage = props => {
                   <li>Implemented better practices regarding digital infrastructure security, software development processes and Search Engine Optimization (taking campi pages and landing pages to Google's first page).</li>
                   <li>Supervising the optimization and national support of tools like: the CRM, the labour exchange system and others.</li>
                 </ul>
-                <Accordion title="Tech used" icon={faMicrochip}>
+                <Accordion title="Tech used" icon={faMicrochip} className={cx('accordion')}>
                   <SkillList compact items={[
                     { name: 'PHP', icon: faPhp },
                     { name: 'WordPress', icon: faWordpress },
@@ -228,7 +228,7 @@ const ResumePage = props => {
                   <li>Developed new lead obtaining tools, increasing Web share in New Enrollment.</li>
                   <li>Developed and maintained an in-house CRM web app using PHP MsSQL Server and Bootstrap, increasing business visibility over the sales funnel.</li>
                 </ul>
-                <Accordion title="Tech used" icon={faMicrochip}>
+                <Accordion title="Tech used" icon={faMicrochip} className={cx('accordion')}>
                   <SkillList compact items={[
                     { name: 'PHP', icon: faPhp },
                     { name: 'WordPress', icon: faWordpress },
@@ -254,7 +254,7 @@ const ResumePage = props => {
                   <li>Implemented web analytics tools for the first time in the University's marketing department.</li>
                   <li>Developed a complex follow-up system connecting web, mailing and the call center, boosting new enrollment. This system was built with PHP and MySQL.</li>
                 </ul>
-                <Accordion title="Tech used" icon={faMicrochip}>
+                <Accordion title="Tech used" icon={faMicrochip} className={cx('accordion')}>
                   <SkillList compact items={[
                     { name: 'PHP', icon: faPhp },
                     { name: 'WordPress', icon: faWordpress },
@@ -276,7 +276,7 @@ const ResumePage = props => {
                   <li>Built and maintained microsites and landing pages for lead obtention in WordPress and HTML + CSS + JS.</li>
                   <li>Developed a Facebook game using Flash and ActionScript 3 for the University alongside other 5 team members in a multidisciplinary team of interns.</li>
                 </ul>
-                <Accordion title="Tech used" icon={faMicrochip}>
+                <Accordion title="Tech used" icon={faMicrochip} className={cx('accordion')}>
                   <SkillList compact items={[
                     { name: 'PHP', icon: faPhp },
                     { name: 'WordPress', icon: faWordpress },

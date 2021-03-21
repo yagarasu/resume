@@ -35,3 +35,15 @@
     margin-left: 2em;
   }  
 }
+
+@media print {
+  .LanguageList > li {
+    flex-direction: column;
+  }
+  .level {
+    margin-left: 3em;
+  }
+  .language {
+    width: 100%;
+  }
+}

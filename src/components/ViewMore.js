@@ -4,13 +4,18 @@ import useCollapse from 'react-collapsed'
 import styles from './ViewMore.module.css'
 import { FontAwesomeIcon as Icon } from '@fortawesome/react-fontawesome'
 import { faMinusSquare, faPlusSquare } from '@fortawesome/free-solid-svg-icons'
+import useDetectPrint from '../hooks/useDetectPrint'
 
 const ViewMore = ({
   children
 }) => {
+  const isPrint = useDetectPrint()
   const { getCollapseProps, getToggleProps, isExpanded } = useCollapse()
   const icon = isExpanded ? faMinusSquare : faPlusSquare
   const showString = isExpanded ? 'less' : 'more'
+  if (isPrint) {
+    return children
+  }
   return (
     <>
       <div  {...getCollapseProps()}>
