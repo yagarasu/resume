@@ -1,0 +1,95 @@
+@use "../../../styles/variables";
+
+.Item {
+  margin-bottom: 3rem;
+
+  header {
+    display: flex;
+    flex-direction: row;
+
+    & > img {
+      width: 4rem;
+      height: 4rem;
+      border: 1px solid variables.$color-lightgray;
+      margin-right: 1rem;
+    }
+
+    & > div {
+      display: flex;
+      flex-direction: column;
+
+      h3, h4 {
+        font-size: 1rem;
+        font-weight: 400;
+        margin: 0;
+      }
+
+      h3 {
+        font-size: 1.2rem;
+        font-weight: 600;
+        margin-top: -0.5rem;
+      }
+
+      h4 {
+        color: variables.$color-darkgray;
+      }
+    }
+  }
+
+  main {
+    padding-left: 3rem;
+    margin-left: 2rem;
+    line-height: 2;
+    border-left: 1px solid variables.$color-lightgray;
+
+    ul, li {
+      padding: 0;
+      padding-left: 1rem;
+    }
+  }
+
+  .PositionHeader {
+    position: relative;
+    margin-top: 2rem;
+    line-height: 1.5;
+
+    &::before {
+      position: absolute;
+      top: 0.75rem;
+      left: -4.25rem;
+      content: '';
+      display: block;
+      width: 0.75rem;
+      height: 0.75rem;
+      background-color: variables.$color-lightgray;
+      border-radius: 50%;
+      border: 1rem solid variables.$color-background;
+    }
+
+    h3, h4 {
+      font-size: 1rem;
+      font-weight: 400;
+      margin: 0;
+    }
+    
+    h3 {
+      font-size: 1.2rem;
+      margin-top: -0.5rem;
+    }
+
+    h4 {
+      color: variables.$color-darkgray;
+    }
+  }
+}
+
+@media print {
+  .Item {
+    header {
+      break-inside: avoid;
+    }
+  } 
+  .PositionContent li {
+    break-inside: avoid;
+  }
+}

@@ -1,0 +1,42 @@
+@use "../../../styles/variables";
+
+.Wrapper {
+  border-bottom: 1px solid variables.$color-lightgray;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+}
+
+.Item {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 2rem;
+
+  & > img {
+    width: 4rem;
+    height: 4rem;
+    border: 1px solid variables.$color-lightgray;
+    margin-right: 1rem;
+    margin-top: 0.5rem;
+  }
+
+  .Data {
+    h3, h4 {
+      margin: 0;
+      padding: 0;
+      font-weight: 400;
+    }
+
+    h4 {
+      color: variables.$color-darkgray;
+    }
+  }
+}
+
+@media print {
+  .Item {
+    break-inside: avoid;
+    & > img {
+      display: none;
+    }
+  }
+}

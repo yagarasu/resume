@@ -1,0 +1,38 @@
+@use "../../../styles/variables";
+
+.Wrapper {
+  border-bottom: 1px solid variables.$color-lightgray;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+}
+
+.List {
+  padding: 0;
+
+  li {
+    margin-bottom: 0.5rem;
+    margin-left: 1rem;
+    font-size: 1rem;
+
+    a {
+      color: variables.$color-gray;
+      margin-left: 1rem;
+    }
+  }
+}
+
+@media print {
+  .List {
+    li {
+      a {
+        margin: 0;
+        display: block;
+        font-size: 0.8rem;
+        &::after {
+          content: attr(href);
+          margin-left: 0.3rem;
+        };
+      }
+    }
+  }
+}

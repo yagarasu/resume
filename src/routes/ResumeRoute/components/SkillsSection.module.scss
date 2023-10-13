@@ -1,0 +1,55 @@
+@use "../../../styles/variables";
+
+.Wrapper {
+  margin-bottom: 2rem;
+}
+
+.Subsection {
+  border-bottom: 1px solid variables.$color-lightgray;
+
+  h3 {
+    font-size: 1.2rem;
+    font-weight: 400;
+  }
+
+  ul, li {
+    list-style: none;
+    padding: 0;
+  }
+
+  ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  li {
+    flex: 0 0 30%;
+    margin-bottom: 1rem;
+
+    span {
+      display: block;
+      font-size: 0.75rem;
+      color: variables.$color-darkgray;
+    }
+  }
+}
+
+@media print {
+  .Subsection {
+    break-inside: avoid;
+    
+    h3 {
+      font-weight: 600;
+    }
+
+    ul {
+      flex-direction: column;
+
+      li {
+        break-inside: avoid;
+      }
+    }
+  }
+}

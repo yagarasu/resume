@@ -1,0 +1,105 @@
+@use "../../styles/variables";
+
+.Wrapper {
+  display: flex;
+  flex-wrap: wrap;
+
+  h2 {
+    font-size: 2rem;
+    font-weight: 400;
+    margin: 0 0 1rem 0;
+    padding: 0;
+  }
+}
+
+.Summary {
+  width: calc(66.666% - 0.5rem);
+  
+  p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    font-weight: 200;
+    margin: 0,
+  }
+}
+
+.SocialMedia {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+  width: calc(33.333% - 0.5rem);
+  font-size: 2.5rem;
+
+  a {
+    display: block;
+    color: variables.$color-blackish;
+    transition: color 0.5s ease-in-out;
+
+    &:hover {
+      color: variables.$color-highlight;
+    }
+  }
+}
+
+.HDivider {
+  display: block;
+  width: 100%;
+  border: 0;
+  border-bottom: 1px solid variables.$color-lightgray;
+  margin-bottom: 2rem;
+}
+
+.Experience {
+  width: calc(50% - 0.5rem);
+  border-right: 1px solid variables.$color-lightgray;
+  box-sizing: border-box;
+  padding-right: 1rem;
+
+  h2 {
+    margin-bottom: 2rem;
+  }
+}
+
+.Sidebar {
+  width: calc(50% - 0.5rem);
+  box-sizing: border-box;
+  padding-left: 1rem;
+}
+
+@media print {
+  .SocialMedia {
+    flex-direction: row;
+    align-items: flex-end;
+    font-size: 1.5rem;
+    padding-bottom: 1rem;
+    a {
+      display: flex;
+      width: 100%;
+
+      &::after {
+        content: attr(href);
+        font-size: 0.75rem;
+        margin-left: 1rem;
+      }
+    }
+  }
+
+  .Summary {
+    width: calc(60% - 0.5rem);
+    margin-right: 1rem;
+
+    p {
+      font-size: 1rem;
+      font-weight: 400;
+    }
+  }
+
+  .Experience {
+    width: calc(80% - 0.5rem);
+  }
+  
+  .Sidebar {
+    width: calc(20% - 0.5rem);
+  }
+}

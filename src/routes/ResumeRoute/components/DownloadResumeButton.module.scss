@@ -1,0 +1,26 @@
+@use "../../../styles/variables";
+
+.DownloadResumeButton {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  padding: 1rem;
+  border-radius: 50%;
+  border: 0px;
+  background-color: variables.$color-highlight;
+  color: variables.$color-lightgray;
+  cursor: pointer;
+  transform: translateY(0);
+  transition: transform 0.5s ease-in-out, background-color 0.5s ;
+
+  &:hover {
+    transform: translateY(0.5rem);
+    background-color: variables.$color-light-highlight;
+  }
+}
+
+@media print {
+  .DownloadResumeButton {
+    display: none;
+  }
+}
