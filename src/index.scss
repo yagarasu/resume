@@ -1,0 +1,44 @@
+@use "./styles/variables";
+
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color: variables.$color-blackish;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background-color: variables.$color-background;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+@media print {
+  @page {
+    size: auto;
+    margin: 0.25in 0.25in 0.5in 0.25in;
+  }
+
+  @page :footer {
+  display: none
+  }
+
+  @page :header {
+  display: none
+  }
+}

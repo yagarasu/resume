@@ -1,0 +1,63 @@
+@use "../../styles/variables";
+
+.Wrapper {
+  h2 {
+    border-bottom: 1px solid variables.$color-lightgray;
+  }
+
+  .Loading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10rem;
+    margin-bottom: 10rem;
+
+    span {
+      margin-top: 1rem;
+    }
+  }
+
+  .Error {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1.3rem;
+
+    pre {
+      font-size: 0.8rem;
+      color: variables.$color-darkgray;
+    }
+
+    button {
+      color: variables.$color-lightgray;
+      background-color: variables.$color-highlight;
+      border: 0;
+      font-size: 1.3rem;
+      padding: 0.5rem 0.75rem 0.5rem 0.75rem;
+      border-radius: 0.3rem;
+      transition: background-color 0.5s ease-in-out;
+      cursor: pointer;
+
+      &:hover {
+        background-color: variables.$color-light-highlight;
+      }
+    }
+  }
+
+  .List {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 1rem;
+    row-gap: 1rem;
+
+    a {
+      color: variables.$color-blackish;
+      text-decoration: none;
+
+      .ListItemIcon {
+        color: variables.$color-darkgray;
+      }
+    }
+  }
+}

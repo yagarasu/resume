@@ -1,0 +1,216 @@
+@use "../styles/variables";
+
+.Wrapper {
+  width: 960px;
+  margin-top: 8rem;
+  margin-left: auto;
+  margin-right: auto;
+  min-height: calc(100vh - 8rem);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.Header {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 1rem;
+  border-bottom: 1px solid variables.$color-lightgray;
+  background-color: variables.$color-background;
+  z-index: 10;
+}
+
+.Logo {
+  display: flex;
+  flex-direction: row;
+  height: 4rem;
+
+  img {
+    flex: 0 0;
+    height: 4rem;
+    margin-right: 0.5rem;
+  }
+
+  div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex: 1 0;
+
+    h1, h2 {
+      margin: 0;
+      padding: 0;
+    }
+
+    h1 {
+      font-weight: 100;
+      font-size: 1.5rem;
+    }
+  
+    h2 {
+      font-size: 1rem;
+      font-weight: 200;
+      color: variables.$color-gray;
+    }
+  }
+}
+
+.Menu {
+  display: flex;
+  gap: 1rem;
+  
+  .MenuItem {
+    display: flex;
+    text-decoration: none;
+    color: variables.$color-blackish;
+    border: 0;
+    border-left: 3px solid variables.$color-blackish;
+    background: transparent;
+    padding-left: 1rem;
+    max-width: 15rem;
+    transition: color 0.5s ease-in-out;
+    cursor: pointer;
+
+    div:nth-child(1) {
+      font-size: 3rem;
+      margin-right: 1rem;
+    }
+
+    div:nth-child(2) {
+      display: flex;
+      flex-direction: column;
+
+      h2, h3 {
+        margin: 0;
+        padding: 0;
+      }
+      
+      h2 {
+        padding-left: 0rem;
+        font-size: 1.3rem;
+        font-weight: 400;
+        transition: padding-left 1s ease-in-out;
+      }
+      
+      h3 {
+        font-size: 1rem;
+        font-weight: 200;
+        color: variables.$color-gray;
+      }
+    }
+
+    &:hover {
+      color: variables.$color-highlight;
+
+      div:nth-child(2) {
+        h2 {
+          padding-left: 2rem;
+        }
+      }
+    }
+  }
+}
+
+.Main {
+  max-width: 960px;
+}
+
+.Footer {
+  overflow: hidden;
+  margin-top: 2.5rem;
+  width: 100%;
+  height: 300px;
+  background-color: variables.$color-blackish;
+  display: flex;
+  flex-direction: row;
+
+  section:first-child {
+    box-sizing: border-box;
+    flex: 0 0 66.666%;
+    padding: 1rem;
+    color: variables.$color-background;
+    h3 {
+      margin: 0;
+      border-bottom: 1px solid variables.$color-background;
+    }
+  }
+
+  section:last-child {
+    flex: 0 0 33.333%;
+  }
+
+  .FooterLogo {
+    width: 100%;
+  }
+
+}
+
+.ModalContent {
+  padding: 1rem;
+  h2 {
+    padding: 0rem 0 1rem 0;
+    margin: 0;
+  }
+
+  & > div {
+    display: flex;
+    flex-direction: column;
+
+    a {
+      text-align: center;
+      color: variables.$color-highlight;
+    }
+  }
+
+  .ModalActions {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    margin-top: 2rem;
+  }
+
+  .ModalClose {
+    border: 0;
+    background-color: variables.$color-blackish;
+    color: variables.$color-background;
+    padding: 0.5rem 1rem;
+
+    &:hover {
+      background-color: variables.$color-highlight;
+    }
+  }
+}
+
+.SocialMedia {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  
+  a {
+    color: variables.$color-background;
+    font-size: 1.5rem;
+    margin: 1rem;
+  }
+}
+
+@media print {
+  .Wrapper {
+    margin-top: 0;
+  }
+  .Header {
+    position: relative;
+    margin-bottom: 2rem;
+  }
+  .Menu {
+    display: none;
+  }
+  .Footer {
+    display: none;
+  }
+}

@@ -1,0 +1,43 @@
+@use "../../../styles/variables";
+
+.Wrapper {
+  border-bottom: 1px solid variables.$color-lightgray;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+}
+
+.Language {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  margin-bottom: 0.5rem;
+
+  .Flag {
+    margin-right: 0.5rem;
+    flex: 0 0 1rem;
+  }
+
+  .Name {
+    margin-right: 0.5rem;
+    flex: 0 0 20%;
+  }
+  
+  .Description {
+    color: variables.$color-gray;
+    font-size: 0.8rem;
+    flex: 0 1 75%;
+  }
+}
+
+@media print {
+  .Wrapper {
+    break-inside: avoid;
+  }
+  
+  .Language {
+    flex-wrap: wrap;
+    .Description {
+      flex: 0 1 100%;
+    }
+  }
+}
