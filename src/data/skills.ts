@@ -16,7 +16,6 @@ export const feSkills: Skill[] = [
   {
     name: 'React Query',
     icon: faDiagramProject,
-    description: 'With redux-saga and redux-thunk.',
   },
   {
     name: 'Typescript',

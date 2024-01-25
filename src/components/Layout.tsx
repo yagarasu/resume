@@ -24,7 +24,7 @@ const Layout: FC<LayoutProps> = ({ children }) => {
             <img src={logoImg} />
             <div>
               <h1>Alexys Hegmann</h1>
-              <h2>Web Developer</h2>
+              <h2>Software Engineer</h2>
             </div>
           </div>
           <div className={styles.Menu}>
