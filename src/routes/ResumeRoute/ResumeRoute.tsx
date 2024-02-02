@@ -1,6 +1,6 @@
 import type { FC } from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
+// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+// import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import { faFileInvoice, faHammer, faHandsHelping } from '@fortawesome/free-solid-svg-icons';
 import ExperienceSection from './components/ExperienceSection';
 import { experience } from '../../data/experience';
@@ -27,16 +27,16 @@ const ResumeRoute: FC<ResumeRouteProps> = () => {
       <div className={styles.Wrapper}>
         <div className={styles.Summary}>
           <Title icon={faFileInvoice} title="Summary" />
-          <p>I am a <strong>Web Developer</strong> specialized in <strong>Frontend</strong> (and capable of doing Backend) based in <strong>Queretaro, Mexico</strong>. I have more than <strong>10 years</strong> of experience working with user facing and internal apps, websites and tools. I majored in <strong>Graphic Design</strong>, but I have been a <strong>passionate developer</strong> since my hands first touched a keyboard as a kid.</p>
+          <p>I'm a <strong>Software Engineer</strong> specialized on web apps for mobile and desktop platforms with more than <strong>10 years</strong> of experience creating browser based software. <strong>Frontend development</strong>: React, Redux, Typescript, CSS with Sass. Build tools like Webpack. <strong>Backend development</strong> with Node.js and PHP (Symfony). Secure Restful API consumption. Databases: MySQL, MongoDB. Elastic Search. Version control with Git.</p>
         </div>
-        <div className={styles.SocialMedia}>
+        {/* <div className={styles.SocialMedia}>
           <a href="https://github.com/yagarasu" target="_blank" rel="noreferer">
             <FontAwesomeIcon icon={faGithub} />
           </a>
           <a href="https://www.linkedin.com/in/alexyshegmann" target="_blank" rel="noreferer">
             <FontAwesomeIcon icon={faLinkedin} />
           </a>
-        </div>
+        </div> */}
         <hr className={styles.HDivider} />
         <div className={styles.Experience}>
           <ExperienceSection items={experience} />
@@ -45,8 +45,8 @@ const ResumeRoute: FC<ResumeRouteProps> = () => {
           <SkillsSection title="Skills" icon={faHammer} skillGroup={techSkills} />
           <SkillsSection title="Soft Skills" icon={faHandsHelping} skillGroup={softSkills} />
           <LanguagesSection languages={languages} />
-          <ConferencesSection conferences={conferences} />
           <EducationSection education={education} />
+          <ConferencesSection conferences={conferences} />
         </div>
       </div>
       <DownloadResumeButton onClick={hndDownloadClick} />

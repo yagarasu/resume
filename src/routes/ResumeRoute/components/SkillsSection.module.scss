@@ -37,18 +37,33 @@
 }
 
 @media print {
+  .Wrapper {
+    margin-bottom: 1rem;
+  }
   .Subsection {
     break-inside: avoid;
     
     h3 {
       font-weight: 600;
+      margin-top: 0;
+      margin-bottom: 0.75rem;
     }
 
     ul {
-      flex-direction: column;
+      display: block;
+      margin-top: 0;
+      margin-bottom: 0.5rem;
+      margin-left: 2rem;
 
       li {
+        display: inline-block;
         break-inside: avoid;
+        margin-right: 1rem;
+        margin-bottom: 0.5rem;
+        font-size: 0.8rem;
+        & > span {
+          display: none;
+        }
       }
     }
   }

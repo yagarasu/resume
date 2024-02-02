@@ -21,7 +21,7 @@ const SkillsSection: FC<SkillsSectionProps> = ({ title, icon, skillGroup }) => {
           {group.name && <h3>{group.name}</h3>}
           <ul>
             {group.skills.map((skill) => (
-              <li>
+              <li key={skill.name}>
                 <FontAwesomeIcon icon={skill.icon} /> {skill.name}
                 {skill.description && <span>{skill.description}</span>}
               </li>

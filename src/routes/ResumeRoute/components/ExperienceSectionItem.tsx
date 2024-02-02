@@ -50,11 +50,11 @@ const ExperienceSectionItem: FC<ExperienceSectionItemProps> = ({ item }) => {
       <section className={styles.Item}>
         <header>
           <img src={logo} />
-          <div>
-            <h3>{place}</h3>
-            <h3>{position.position}</h3>
-            <h4>{formatedStart} - {isPresent ? 'present' : formatedEnd}</h4>
-            <h4>{formatDuration(duration)}</h4>
+          <div className={styles.ItemHeader}>
+            <h3 className={styles.ItemPlace}>{place}</h3>
+            <h3 className={styles.ItemPosition}>{position.position}</h3>
+            <h4 className={styles.ItemTimeline}>{formatedStart} - {isPresent ? 'present' : formatedEnd}</h4>
+            <h4 className={styles.ItemDuration}>{formatDuration(duration)}</h4>
           </div>
         </header>
         <main className={styles.PositionContent}>
@@ -75,10 +75,10 @@ const ExperienceSectionItem: FC<ExperienceSectionItemProps> = ({ item }) => {
     <section className={styles.Item}>
       <header>
         <img src={logo} />
-        <div>
-          <h3>{place}</h3>
-          <h4>{formatedOverallStart} - {isPresent ? 'present' : formatedOverallEnd}</h4>
-          <h4>{formatDuration(overallDuration)}</h4>
+        <div className={styles.ItemHeader}>
+          <h3 className={styles.ItemPlace}>{place}</h3>
+          <h4 className={styles.ItemTimeline}>{formatedOverallStart} - {isPresent ? 'present' : formatedOverallEnd}</h4>
+          <h4 className={styles.ItemDuration}>{formatDuration(overallDuration)}</h4>
         </div>
       </header>
       <main>
@@ -92,9 +92,9 @@ const ExperienceSectionItem: FC<ExperienceSectionItemProps> = ({ item }) => {
           return (
             <div key={position.position}>
               <div className={styles.PositionHeader}>
-                <h3>{position.position}</h3>
-                <h4>{formatedStart} - {isPresent ? 'present' : formatedEnd}</h4>
-                <h4>{formatDuration(duration)}</h4>
+                <h3 className={styles.ItemPosition}>{position.position}</h3>
+                <h4 className={styles.ItemTimeline}>{formatedStart} - {isPresent ? 'present' : formatedEnd}</h4>
+                <h4 className={styles.ItemDuration}>{formatDuration(duration)}</h4>
               </div>
               <div className={styles.PositionContent}>
                 <Markdown>{position.description}</Markdown>

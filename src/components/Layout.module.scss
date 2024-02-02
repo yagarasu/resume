@@ -199,13 +199,26 @@
   }
 }
 
+@media only screen and (max-width: 960px) {
+  .Wrapper {
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 100%;
+  }
+  .Main {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    margin-top: 0rem;
+  }
+}
+
 @media print {
   .Wrapper {
     margin-top: 0;
   }
   .Header {
     position: relative;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
   }
   .Menu {
     display: none;
