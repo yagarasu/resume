@@ -12,11 +12,11 @@ export const education: Education[] = [
     startDate: parse('2006-09', 'yyyy-MM', new Date()),
     endDate: parse('2010-04', 'yyyy-MM', new Date()),
   },
-  {
-    school: 'Montreal Education Center (Mexico)',
-    logo: cemLogo,
-    degree: 'Technical Course, Graphic Design',
-    startDate: parse('2003-09', 'yyyy-MM', new Date()),
-    endDate: parse('2006-06', 'yyyy-MM', new Date()),
-  },
+  // {
+  //   school: 'Montreal Education Center (Mexico)',
+  //   logo: cemLogo,
+  //   degree: 'Technical Course, Graphic Design',
+  //   startDate: parse('2003-09', 'yyyy-MM', new Date()),
+  //   endDate: parse('2006-06', 'yyyy-MM', new Date()),
+  // },
 ];

@@ -11,11 +11,12 @@ export const feSkills: Skill[] = [
   {
     name: 'Redux',
     icon: faFileCode,
-    description: 'With redux-saga and redux-thunk.',
+    description: 'With redux-saga and redux-thunk',
   },
   {
     name: 'React Query',
     icon: faDiagramProject,
+    description: 'Also known as Tanstack Query',
   },
   {
     name: 'Typescript',
@@ -112,29 +113,14 @@ export const softSkills: SkillGroup[] = [
   {
     skills: [
       {
-        name: 'Willingness to learn',
-        icon: faGraduationCap,
-        description: 'New tech, new frameworks, new skills, even new languages'
-      },
-      {
         name: 'Mentorship',
         icon: faChalkboardTeacher,
         description: 'I love to share what I\'ve learned in the past 10 years'
       },
       {
-        name: 'Organized',
-        icon: faTasks,
-        description: 'From task lists to kanban; I have a couple of tricks under my sleeve'
-      },
-      {
         name: 'Problem Solving',
         icon: faBrain,
         description: 'From initial requirements analysis to prod troubleshooting'
-      },
-      {
-        name: 'Integrity',
-        icon: faUserTie,
-        description: 'The truth is my compass'
       },
       {
         name: 'Remote work',

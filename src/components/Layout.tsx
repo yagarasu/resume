@@ -24,10 +24,10 @@ const Layout: FC<LayoutProps> = ({ children }) => {
             <img src={logoImg} />
             <div>
               <h1>Alexys Hegmann</h1>
-              <h2>Software Engineer</h2>
+              <h2>Senior Software Engineer</h2>
             </div>
           </div>
-          <div className={styles.Menu}>
+          {/* <div className={styles.Menu}>
             <Link to="/" className={styles.MenuItem}>
               <div>
                 <FontAwesomeIcon icon={faCoffee} />
@@ -55,7 +55,7 @@ const Layout: FC<LayoutProps> = ({ children }) => {
                 <h3>Let's work together</h3>
               </div>
             </button>
-          </div>
+          </div> */}
         </header>
         <div className={styles.Main}>
           {children}
@@ -64,9 +64,9 @@ const Layout: FC<LayoutProps> = ({ children }) => {
           <section>
             <h3>Social Media</h3>
             <div className={styles.SocialMedia}>
-              <a href="https://github.com/yagarasu" target="_blank" rel="noreferer">
+              {/* <a href="https://github.com/yagarasu" target="_blank" rel="noreferer">
                 <FontAwesomeIcon icon={faGithub} />
-              </a>
+              </a> */}
               <a href="https://www.linkedin.com/in/alexyshegmann" target="_blank" rel="noreferer">
                 <FontAwesomeIcon icon={faLinkedin} />
               </a>

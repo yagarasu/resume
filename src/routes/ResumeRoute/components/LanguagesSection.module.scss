@@ -32,12 +32,26 @@
 @media print {
   .Wrapper {
     break-inside: avoid;
+    margin-bottom: 1rem;
+    
+    h2 {
+      margin-bottom: 0.5rem;
+    }
   }
   
   .Language {
-    flex-wrap: wrap;
+    display: block;
+    margin-left: 2rem;
+    & > div {
+      display: inline-block;
+    }
+
+    .Name::after {
+      content: ':';
+    }
+
     .Description {
-      flex: 0 1 100%;
+      color: inherit;
     }
   }
 }

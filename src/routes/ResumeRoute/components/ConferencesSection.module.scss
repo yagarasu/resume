@@ -22,6 +22,9 @@
 }
 
 @media print {
+  .Wrapper {
+    display: none;
+  }
   .List {
     li {
       a {

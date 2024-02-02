@@ -15,7 +15,7 @@ const ConferencesSection: FC<ConferencesSectionProps> = ({ conferences }) => {
       <Title icon={faMicrophone} title="Attended Conferences" />
       <ul className={styles.List}>
         {conferences.map((conference) => (
-          <li>{conference.name} ({conference.year}) <a href={conference.link} target="_blank">
+          <li key={`${conference.name}-${conference.year}`}>{conference.name} ({conference.year}) <a href={conference.link} target="_blank">
             <FontAwesomeIcon icon={faExternalLink} />
           </a></li>
         ))}
