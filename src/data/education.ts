@@ -2,7 +2,7 @@ import { parse } from "date-fns";
 import { Education } from "../types/education";
 
 import unitecLogo from '../assets/unitec.png';
-import cemLogo from '../assets/cem.png';
+// import cemLogo from '../assets/cem.png';
 
 export const education: Education[] = [
   {

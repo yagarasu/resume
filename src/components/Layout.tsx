@@ -1,12 +1,11 @@
 import { useState, type FC, type ReactNode } from 'react';
 import logoImg from '../assets/logo.svg';
 import whiteLogo from '../assets/logoWhite.svg';
-import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCoffee, faBrain, faPaperPlane } from '@fortawesome/free-solid-svg-icons';
+import { faPaperPlane } from '@fortawesome/free-solid-svg-icons';
 import styles from './Layout.module.scss';
 import Modal from './Modal';
-import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
+import { faLinkedin } from '@fortawesome/free-brands-svg-icons';
 
 export type LayoutProps = {
   children: ReactNode;
@@ -14,7 +13,7 @@ export type LayoutProps = {
 
 const Layout: FC<LayoutProps> = ({ children }) => {
   const [contactOpen, setContactOpen] = useState(false);
-  const hndContactOpen = () => setContactOpen(true);
+  // const hndContactOpen = () => setContactOpen(true);
   const hndContactClose = () => setContactOpen(false);
   return (
     <>
