@@ -1,40 +1,39 @@
-import { faCss3, faGitAlt, faNodeJs, faPhp, faReact, faSass, faSquareJs } from "@fortawesome/free-brands-svg-icons";
+import { faCss3, faDocker, faGitAlt, faNodeJs, faPhp, faReact, faSass, faSquareJs } from "@fortawesome/free-brands-svg-icons";
 import { Skill, SkillGroup } from "../types/skill";
 import { faBrain, faChalkboardTeacher, faCube, faDatabase, faDiagramProject, faFileCode, faLaptopHouse, faSearch, faTerminal } from "@fortawesome/free-solid-svg-icons";
 
 export const feSkills: Skill[] = [
+  {
+    name: 'Typescript',
+    icon: faFileCode,
+  },
   {
     name: 'React',
     icon: faReact,
     description: 'Using it since 2016',
   },
   {
+    name: 'Tanstack Query',
+    icon: faDiagramProject,
+    description: 'Also known as React Query',
+  },
+  {
     name: 'Redux',
     icon: faFileCode,
-    description: 'With redux-saga and redux-thunk',
-  },
-  {
-    name: 'React Query',
-    icon: faDiagramProject,
-    description: 'Also known as Tanstack Query',
-  },
-  {
-    name: 'Typescript',
-    icon: faFileCode,
+    description: 'With Redux Toolkit',
   },
   {
     name: 'Javascript',
     icon: faSquareJs,
-    description: 'ES6+, Vanilla and jQuery',
-  },
-  {
-    name: 'CSS',
-    icon: faCss3,
-    description: 'Latest CSS: Flexbox, Grid, etc',
+    description: 'No frameworks',
   },
   {
     name: 'Sass',
     icon: faSass,
+  },
+  {
+    name: 'Tailwind CSS',
+    icon: faCss3,
   }
 ];
 
@@ -48,12 +47,20 @@ export const beSkills: Skill[] = [
     icon: faPhp,
   },
   {
+    name: 'Laravel',
+    icon: faPhp,
+  },
+  {
     name: 'Node.js',
     icon: faNodeJs,
   },
   {
     name: 'Koa.js',
     icon: faNodeJs,
+  },
+  {
+    name: 'Mongoose',
+    icon: faDatabase,
   },
 ];
 
@@ -84,9 +91,17 @@ export const otherSkills: Skill[] = [
     description: 'Git CLI; Github, Bitbucket; Gitflow'
   },
   {
+    name: 'Docker',
+    icon: faDocker,
+    description: 'Docker & Docker Compose'
+  },
+  {
     name: 'Webpack',
     icon: faCube,
-    description: 'config.js creation'
+  },
+  {
+    name: 'Vite',
+    icon: faCube,
   },
 ];
 
