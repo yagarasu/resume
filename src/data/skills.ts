@@ -1,6 +1,6 @@
 import { faCss3, faDocker, faGitAlt, faNodeJs, faPhp, faReact, faSass, faSquareJs } from "@fortawesome/free-brands-svg-icons";
 import { Skill, SkillGroup } from "../types/skill";
-import { faBrain, faChalkboardTeacher, faCube, faDatabase, faDiagramProject, faFileCode, faLaptopHouse, faSearch, faTerminal } from "@fortawesome/free-solid-svg-icons";
+import { faChalkboardTeacher, faCube, faDatabase, faDiagramProject, faFileCode, faLaptopHouse, faSearch, faTerminal } from "@fortawesome/free-solid-svg-icons";
 
 export const feSkills: Skill[] = [
   {
