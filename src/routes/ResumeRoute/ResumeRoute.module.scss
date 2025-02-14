@@ -115,5 +115,15 @@
   
   .Sidebar {
     width: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+
+    .SidebarGroup:nth-child(1) {
+      width: 66.666%;
+    }
+    .SidebarGroup:nth-child(2) {
+      width: 33.333%;
+    }
   }
 }

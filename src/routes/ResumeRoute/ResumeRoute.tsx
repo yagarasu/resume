@@ -60,19 +60,23 @@ const ResumeRoute: FC<ResumeRouteProps> = () => {
           <ExperienceSection items={experience} />
         </div>
         <div className={styles.Sidebar}>
-          <SkillsSection
-            title="Skills"
-            icon={faHammer}
-            skillGroup={techSkills}
-          />
-          <SkillsSection
-            title="Soft Skills"
-            icon={faHandsHelping}
-            skillGroup={softSkills}
-          />
-          <LanguagesSection languages={languages} />
-          <EducationSection education={education} />
-          <ConferencesSection conferences={conferences} />
+          <div className={styles.SidebarGroup}>
+            <SkillsSection
+              title="Skills"
+              icon={faHammer}
+              skillGroup={techSkills}
+            />
+            <SkillsSection
+              title="Soft Skills"
+              icon={faHandsHelping}
+              skillGroup={softSkills}
+            />
+          </div>
+          <div className={styles.SidebarGroup}>
+            <LanguagesSection languages={languages} />
+            <EducationSection education={education} />
+            <ConferencesSection conferences={conferences} />
+          </div>
         </div>
       </div>
       <DownloadResumeButton onClick={hndDownloadClick} />

@@ -132,11 +132,11 @@ export const softSkills: SkillGroup[] = [
         icon: faChalkboardTeacher,
         description: 'I love to share what I\'ve learned in the past 10 years'
       },
-      {
-        name: 'Problem Solving',
-        icon: faBrain,
-        description: 'From initial requirements analysis to prod troubleshooting'
-      },
+      // {
+      //   name: 'Problem Solving',
+      //   icon: faBrain,
+      //   description: 'From initial requirements analysis to prod troubleshooting'
+      // },
       {
         name: 'Remote work',
         icon: faLaptopHouse,

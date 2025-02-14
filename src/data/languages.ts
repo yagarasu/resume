@@ -14,6 +14,6 @@ export const languages: Language[] = [
   {
     name: 'Japanese',
     flag: '🇯🇵',
-    description: 'JPLT N5 + 3 months in Japan'
+    description: 'JPLT N4 + 3 months in Japan'
   },
 ];
