@@ -63,14 +63,18 @@ const ExperienceSectionItem: FC<ExperienceSectionItemProps> = ({ item }) => {
       </section>
     );
   }
-  const lastPosition = positions[0];
-  const firstPosition = positions[positions.length - 1];
+  // El rango del empleo se calcula con min/max, no con la posición del array:
+  // así no importa si las posiciones vienen en orden ascendente o descendente.
+  const startDates = positions.map((p) => p.startDate.getTime());
+  const endDates = positions.map((p) => p.endDate.getTime());
+  const overallStart = new Date(Math.min(...startDates));
+  const overallEnd = new Date(Math.max(...endDates));
   const {
     formatedStart: formatedOverallStart,
     formatedEnd: formatedOverallEnd,
     isPresent,
     duration: overallDuration,
-  } = calculateDates(firstPosition.startDate, lastPosition.endDate);
+  } = calculateDates(overallStart, overallEnd);
   return (
     <section className={styles.Item}>
       <header>

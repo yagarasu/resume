@@ -57,16 +57,27 @@ export const experience: Experience[] = [
     positions: [
       {
         position: 'Senior Software Engineer',
-        startDate: parse('2015-03', 'yyyy-MM', new Date()),
+        startDate: parse('2019-05', 'yyyy-MM', new Date()),
         endDate: parse('2021-05', 'yyyy-MM', new Date()),
         description: `Large-scale content management platform (Drupal → React/Redux migration).
 
 * Led the migration of a large-scale content management platform from Drupal to a **React/Redux** architecture — **~700K articles (10 years of content), ~100K monthly visits** — designing a scalable UI framework and component structure.
 * Ran down a production incident in the templated newsletter system (**Elasticsearch + Redis**): the per-user interest cache key was the bottleneck stalling the send, so I replaced it with a faster key-generation model.
 * Designed and implemented full-stack features using **Symfony, Node.js, MySQL, MongoDB and ElasticSearch**, supporting high-content, data-intensive workflows.
-* Built interactive, data-driven applications and dashboards with **D3.js** and Google Charts, improving the clarity of complex datasets for internal and external users.
 
-**Skills used**: React, Redux, Redux-Saga, TypeScript, CSS+Sass, PHP, Symfony, Node.js, Koa, MySQL, MongoDB, ElasticSearch, Redis, D3.js, Google Charts, Git, Webpack`,
+**Skills used**: React, Redux, Redux-Saga, TypeScript, CSS+Sass, PHP, Symfony, Node.js, MySQL, MongoDB, ElasticSearch, Redis, Git, Webpack`,
+      },
+      {
+        position: 'Software Engineer',
+        startDate: parse('2015-03', 'yyyy-MM', new Date()),
+        endDate: parse('2019-04', 'yyyy-MM', new Date()),
+        description: `Content platforms, internal data tools and data-visualization applications.
+
+* Built interactive, data-driven applications and dashboards with **D3.js** and Google Charts, improving the clarity of complex datasets for internal and external users.
+* Integrated frontend applications with RESTful APIs and backend services (Node.js, Symfony).
+* Maintained and improved the frontend of multiple content-aggregator sites in **Drupal 7** and a legacy site in Drupal 5, keeping them functional while newer work moved to React.
+
+**Skills used**: React, Redux, JavaScript, CSS+Sass, PHP, Symfony, Node.js, Koa, MySQL, MongoDB, ElasticSearch, Drupal 7, D3.js, Google Charts, Git, Webpack`,
       },
     ],
   },
