@@ -1,0 +1,103 @@
+@use "../../../styles/variables";
+
+.Wrapper {
+  width: 100%;
+  box-sizing: border-box;
+  border-top: 1px solid variables.$color-lightgray;
+  margin-top: 1rem;
+  padding-top: 1.5rem;
+}
+
+.Item {
+  margin-bottom: 2rem;
+
+  header {
+    margin-bottom: 0.5rem;
+
+    h3, h4 {
+      margin: 0;
+      padding: 0;
+      font-weight: 400;
+    }
+
+    h3 {
+      font-size: 1.1rem;
+      font-weight: 600;
+
+      a {
+        margin-left: 0.75rem;
+        font-size: 0.8rem;
+        font-weight: 400;
+        color: variables.$color-gray;
+      }
+    }
+
+    h4 {
+      color: variables.$color-darkgray;
+    }
+  }
+
+  .Summary {
+    margin: 0 0 0.5rem 0;
+    line-height: 1.6;
+  }
+
+  ul {
+    margin: 0;
+    padding-left: 1.25rem;
+
+    li {
+      margin-bottom: 0.4rem;
+      line-height: 1.6;
+
+      .BulletLink {
+        margin-left: 0.5rem;
+        font-size: 0.8rem;
+        color: variables.$color-gray;
+      }
+    }
+  }
+}
+
+@media print {
+  .Wrapper {
+    break-inside: avoid;
+  }
+
+  .Item {
+    font-size: 10pt;
+    margin-bottom: 1rem;
+
+    header {
+      break-inside: avoid;
+
+      h3 {
+        display: inline-block;
+        font-size: 10pt;
+        margin-right: 0.5rem;
+
+        a {
+          display: none;
+        }
+      }
+
+      h4 {
+        display: inline-block;
+      }
+    }
+
+    ul {
+      padding-left: 1rem;
+
+      li {
+        padding-left: 0.5rem;
+        break-inside: avoid;
+        line-height: 1.4;
+
+        .BulletLink {
+          display: none;
+        }
+      }
+    }
+  }
+}

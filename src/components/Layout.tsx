@@ -2,7 +2,7 @@ import { useState, type FC, type ReactNode } from 'react';
 import logoImg from '../assets/logo.svg';
 import whiteLogo from '../assets/logoWhite.svg';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faPaperPlane } from '@fortawesome/free-solid-svg-icons';
+import { faPaperPlane, faGlobe } from '@fortawesome/free-solid-svg-icons';
 import styles from './Layout.module.scss';
 import Modal from './Modal';
 import { faLinkedin } from '@fortawesome/free-brands-svg-icons';
@@ -23,7 +23,7 @@ const Layout: FC<LayoutProps> = ({ children }) => {
             <img src={logoImg} />
             <div>
               <h1>Alexys Hegmann</h1>
-              <h2>Senior Software Engineer</h2>
+              <h2>Senior Software Engineer · AI-native products & agentic development</h2>
             </div>
           </div>
           {/* <div className={styles.Menu}>
@@ -66,6 +66,9 @@ const Layout: FC<LayoutProps> = ({ children }) => {
               {/* <a href="https://github.com/yagarasu" target="_blank" rel="noreferer">
                 <FontAwesomeIcon icon={faGithub} />
               </a> */}
+              <a href="https://alexyshegmann.tech" target="_blank" rel="noreferer" title="alexyshegmann.tech">
+                <FontAwesomeIcon icon={faGlobe} />
+              </a>
               <a href="https://www.linkedin.com/in/alexyshegmann" target="_blank" rel="noreferer">
                 <FontAwesomeIcon icon={faLinkedin} />
               </a>

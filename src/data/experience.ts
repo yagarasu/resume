@@ -1,32 +1,55 @@
 import { parse } from 'date-fns';
 import { Experience } from '../types/experience';
 
+import fountainLogo from '../assets/fountain.png';
 import nextivaLogo from '../assets/nextiva.jpg';
 import pslLogo from '../assets/psl.png';
 import ahLogo from '../assets/logo.svg';
 import unidepLogo from '../assets/unidep.png';
-// import unitecLogo from '../assets/unitec.png';
 
 export const experience: Experience[] = [
+  {
+    place: 'Fountain',
+    logo: fountainLogo,
+    positions: [
+      {
+        position: 'Senior Software Engineer',
+        startDate: parse('2026-03', 'yyyy-MM', new Date()),
+        endDate: new Date(),
+        description: `AI-native onboarding product for the global frontline workforce: preboarding and onboarding workflows built from tasks, consumed by new hires through a mobile web app.
+
+* Owns epics end-to-end in a **fully agentic workflow** — Cursor, Claude Code and a proprietary harness built on Open Inspect: uses AI to surface gaps in the spec, closes them in dialogue, then delegates implementation, routes the PR through agent review (including a custom skill I authored) and babysits it to merge; **ships to production hourly**.
+* Refactored the onboarding product's **AI agent**, equipping it with tools over **MCP (Model Context Protocol)**, authoring reusable skills and optimizing prompts — improving perceived goal completion across the product.
+* Closed a systemic data gap where documents signed in **Dropbox Sign** never marked their task complete in our system (and vice versa), taking recurring production incidents from **~10/month to zero**.
+* Shipped new admin-facing capabilities in the pending-tasks view (document review, form approvals), taking the surface from **unused to GA**.
+* Validates prompt and agent changes against the team's **perception-based eval framework** before shipping them.
+
+**Skills used**: React, TypeScript, Node.js, MongoDB, MCP (Model Context Protocol), agentic workflows, prompt engineering, evals, observability`,
+      },
+    ],
+  },
   {
     place: 'Nextiva',
     logo: nextivaLogo,
     positions: [
       {
-        position: 'Senior Software Engineer',
+        position: 'Senior Software Engineer (Frontend Focus)',
         startDate: parse('2021-05', 'yyyy-MM', new Date()),
-        endDate: new Date(),
-        description: `* Led a frontend team of up to four developers, guiding architecture decisions and best practices.
-* Designed and built from scratch the frontend for a task automation designer web application (similar to Make.com or IFTTT) using React, Redux, TanStack Query, DraftJS, and TypeScript.
-* Developed a Softphone integration with Salesforce’s OpenCTI.
-* Enhanced reliability and performance of a Video Calls web application by delivering critical bug fixes, ensuring stability for small and medium-sized businesses.
-* Quickly adapted to new technologies, learning and implementing Amazon Chime SDK and Azure Communication Services to build scalable real-time communication features.
-* Collaborated cross-functionally with UX designers, product managers, and backend engineers to refine and optimize video call functionality.
-* Contributed to the setup and optimization of the main monorepo, improving build chains, CI/CD pipelines, static analysis tools, and code coverage, boosting developer experience and team productivity.
+        endDate: parse('2025-11', 'yyyy-MM', new Date()),
+        description: `Task automation platform and real-time communication application.
 
-**Skills used**: React, Redux, React-query (Tanstack Query), Typescript, Material UI, Emotion, CSS with BEM, MongoDB, Git, Webpack, Vite, pnpm with turbo, Github, Azure Communication Services`,
+* Architected and led frontend development of a task automation platform and a real-time communication application using **React, Redux and TypeScript**, defining scalable state management and reusable component patterns adopted across the team.
+* Designed a **DSL-driven configuration UI** for the automation template builder — choosing extra frontend complexity over hardcoded copy so templates could change without a release, and the team could iterate on the UI quickly.
+* Led bundle size optimization initiatives, **reducing the bundle by ~50%** and improving load performance and rendering efficiency across the application.
+* Implemented full application observability with **Datadog**, cutting time-to-debug from **1–2 days to ~1 hour** and giving production visibility into errors, performance bottlenecks and user-impacting anomalies.
+* Established frontend testing standards with Jest, Vitest and React Testing Library, reaching **80% test coverage** and contributing to the end-to-end strategy with Cypress.
+* Modernized the monorepo (**Turborepo/Vite**), standing up CI end-to-end at **~40 minutes** with automatic deploys to staging and moving releases to a weekly cadence.
+* Delivered real-time communication features integrating **Amazon Chime SDK, Azure Communication Services and Salesforce OpenCTI**, enabling scalable voice and video experiences.
+* Championed code quality and maintainable architecture through structured code reviews, and **mentored 2 junior engineers**.
+
+**Skills used**: React, Redux, TypeScript, TanStack Query, Material UI, Emotion, CSS with BEM, MongoDB, Datadog, Jest, Vitest, Cypress, Turborepo, Vite, pnpm, GitHub Actions, Amazon Chime SDK, Azure Communication Services, Salesforce OpenCTI`,
       },
-    ]
+    ],
   },
   {
     place: 'P/S/L Group',
@@ -34,46 +57,35 @@ export const experience: Experience[] = [
     positions: [
       {
         position: 'Senior Software Engineer',
-        startDate: parse('2019-05', 'yyyy-MM', new Date()),
-        endDate: parse('2021-05', 'yyyy-MM', new Date()),
-        description: `* Led the frontend migration from Drupal to React for a content management app serving tens of thousands of users, utilizing React, Redux, Redux-Saga, and Awilix to securely consume RESTful APIs.
-* Developed high-performance, scalable backend features with Symfony, MySQL, and ElasticSearch, ensuring zero downtime.
-* Designed and built a custom newsletter system from scratch using Twig, Symfony, MySQL, and ElasticSearch, streamlining content distribution.
-* Created an admin portal for content management using React and Material-UI, eliminating countless hours of manual database updates.
-* Mentored and guided three junior developers, improving their ability to write maintainable, decoupled code following best practices.
-
-**Skills used**: React, Redux, Material UI, CSS+Sass, PHP, Symfony, Node.js, MySQL, MongoDB, ElasticSearch, Git, Webpack`,
-      },
-      {
-        position: 'Software Engineer',
         startDate: parse('2015-03', 'yyyy-MM', new Date()),
-        endDate: parse('2019-04', 'yyyy-MM', new Date()),
-        description: `* Developed an internal data visualization application with Koa (Node.js), MongoDB, ElasticSearch, and a React frontend.
-* Built a dynamic survey generation and visualization platform using Symfony 2, MySQL, Google Charts, dynamic SVG (JavaScript), and a D3.js prototype.
-* Maintained and improved the frontend of multiple content aggregator websites in Drupal 7 and a legacy site in Drupal 5, ensuring continued functionality and user experience improvements.
+        endDate: parse('2021-05', 'yyyy-MM', new Date()),
+        description: `Large-scale content management platform (Drupal → React/Redux migration).
 
-**Skills used**: React, Redux, CSS+Sass, Drupal 7, jQuery, jQuery UI, Node.js, PHP, Symfony, Node.js, Koa.js, MySQL, MongoDB, ElasticSearch, Git, Webpack, Gulp`,
+* Led the migration of a large-scale content management platform from Drupal to a **React/Redux** architecture — **~700K articles (10 years of content), ~100K monthly visits** — designing a scalable UI framework and component structure.
+* Ran down a production incident in the templated newsletter system (**Elasticsearch + Redis**): the per-user interest cache key was the bottleneck stalling the send, so I replaced it with a faster key-generation model.
+* Designed and implemented full-stack features using **Symfony, Node.js, MySQL, MongoDB and ElasticSearch**, supporting high-content, data-intensive workflows.
+* Built interactive, data-driven applications and dashboards with **D3.js** and Google Charts, improving the clarity of complex datasets for internal and external users.
+
+**Skills used**: React, Redux, Redux-Saga, TypeScript, CSS+Sass, PHP, Symfony, Node.js, Koa, MySQL, MongoDB, ElasticSearch, Redis, D3.js, Google Charts, Git, Webpack`,
       },
-    ]
+    ],
   },
   {
     place: 'Freelance',
     logo: ahLogo,
     positions: [
       {
-        position: '',
+        position: 'Software Developer',
         startDate: parse('2014-02', 'yyyy-MM', new Date()),
         endDate: parse('2015-02', 'yyyy-MM', new Date()),
-        description: `With side projects since 2006.
+        description: `* Delivered a second, repeat **redesign of UNIDEP's website** as a freelance engagement after returning from Tokyo — the same client coming back.
+* Developed full-stack web applications and WordPress solutions for small and mid-sized businesses.
+* Built internal tools and data visualization prototypes with interactive graph interfaces using React, Node.js and ElasticSearch.
+* Implemented third-party API integrations including Google Geocoder and SOAP-based services.
 
-* Developed WordPress-based websites for small and medium-sized businesses, delivering customized solutions.
-* Built an embeddable cost calculator for a university, integrating with the HubSpot API and an internal tool via SOAP to improve conversion rates.
-* Created a CLI tool to convert Excel-based addresses into geolocation points using the Google Geocoder API, automating and streamlining location data processing.
-* Developed an interactive graph data visualization prototype using D3.js, React, Node.js, MongoDB, and ElasticSearch.
-
-**Skills used**: PHP, Wordpress, CSS+Sass, Javascript, MySQL, MsSQL Server, Google Analytics, Node.js, MongoDB, ElasticSearch, Excel, D3.js`
-      }
-    ]
+**Skills used**: PHP, WordPress, CSS+Sass, JavaScript, MySQL, MSSQL Server, Google Analytics, React, Node.js, MongoDB, ElasticSearch, D3.js`,
+      },
+    ],
   },
   {
     place: 'UNIDEP',
@@ -83,15 +95,13 @@ export const experience: Experience[] = [
         position: 'Digital Marketing Manager & Development Lead',
         startDate: parse('2011-02', 'yyyy-MM', new Date()),
         endDate: parse('2014-02', 'yyyy-MM', new Date()),
-        description: `* Led a multidisciplinary team of five, overseeing digital strategy and development.
-* Developed new lead generation tools, increasing web-driven student enrollments.
-* Built and maintained an in-house CRM web app using PHP, MSSQL Server, and Bootstrap, improving visibility into the sales funnel.
-* Designed and executed digital marketing strategies, managing the university’s online presence, including websites, landing pages, social media, and digital advertising.
-* Optimized conversion tools and user experience through web analytics, reducing bounce rates and increasing lead generation.
-* Implemented security best practices and SEO strategies, boosting campus and landing pages to Google's first page.
+        description: `* Led a cross-functional team of two developers, a project manager, a DBA and a digital media coordinator, owning digital strategy, development and marketing execution across web, social and advertising channels.
+* Led the end-to-end **redesign of the university's website**, aligning design, content and engineering stakeholders around a single rebuild.
+* Built an in-house **CRM and lead-generation tooling with PHP and MSSQL**, improving visibility into enrollment funnels and driving web-based student acquisition.
+* Drove **SEO, UX and analytics** improvements that cut bounce rates and pushed key university pages to top Google rankings.
 
-**Skills used**: PHP, Wordpress, CSS, Javascript, MySQL, MsSQL Server, Google Analytics, Excel, MsProject`,
-      }
+**Skills used**: PHP, MSSQL Server, WordPress, CSS, JavaScript, Google Analytics, SEO, digital marketing`,
+      },
     ],
   },
 ];

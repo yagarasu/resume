@@ -15,6 +15,10 @@ import LanguagesSection from "./components/LanguagesSection";
 import { languages } from "../../data/languages";
 import ConferencesSection from "./components/ConferencesSection";
 import { conferences } from "../../data/conferences";
+import CertificationsSection from "./components/CertificationsSection";
+import { certifications } from "../../data/certifications";
+import ProjectsSection from "./components/ProjectsSection";
+import { projects } from "../../data/projects";
 import EducationSection from "./components/EducationSection";
 import { education } from "../../data/education";
 import DownloadResumeButton from "./components/DownloadResumeButton";
@@ -32,19 +36,16 @@ const ResumeRoute: FC<ResumeRouteProps> = () => {
         <div className={styles.Summary}>
           <Title icon={faFileInvoice} title="Summary" />
           <p>
-            Passionate <strong>Senior Software Engineer</strong> with over{" "}
-            <strong>10 years of experience</strong> building high-performance
-            <strong>web applications</strong> for both mobile and desktop
-            platforms. Specialized in{" "}
-            <strong>React, TypeScript, and CSS (Sass)</strong> with expertise in
-            crafting scalable and maintainable frontend architectures. Skilled
-            in <strong>backend development</strong> with{" "}
-            <strong>Node.js and PHP (Symfony)</strong>, consuming secure{" "}
-            <strong>RESTful APIs</strong>, and working with databases like{" "}
-            <strong>MySQL, MongoDB, and ElasticSearch</strong>. Proficient in{" "}
-            <strong>build tools (Webpack, Vite)</strong> and{" "}
-            <strong>version control (Git)</strong>. Dedicated to writing clean,
-            efficient code and delivering exceptional user experiences.
+            Senior Software Engineer with <strong>15+ years</strong> building
+            large-scale web applications, currently inside an AI-native product
+            organization working in a{" "}
+            <strong>fully agentic development workflow</strong> (Cursor, Claude
+            Code, custom agent harness) that ships to production hourly.
+            Hands-on experience taking a product's <strong>AI agent</strong> to
+            production — <strong>MCP tooling</strong>, skill authoring and
+            prompt optimization — on top of deep{" "}
+            <strong>React, TypeScript and Node.js</strong> engineering across
+            real-time, high-traffic systems.
           </p>
         </div>
         {/* <div className={styles.SocialMedia}>
@@ -66,6 +67,7 @@ const ResumeRoute: FC<ResumeRouteProps> = () => {
               icon={faHammer}
               skillGroup={techSkills}
             />
+            <CertificationsSection certifications={certifications} />
             <SkillsSection
               title="Soft Skills"
               icon={faHandsHelping}
@@ -77,6 +79,9 @@ const ResumeRoute: FC<ResumeRouteProps> = () => {
             <EducationSection education={education} />
             <ConferencesSection conferences={conferences} />
           </div>
+        </div>
+        <div className={styles.Projects}>
+          <ProjectsSection projects={projects} />
         </div>
       </div>
       <DownloadResumeButton onClick={hndDownloadClick} />
