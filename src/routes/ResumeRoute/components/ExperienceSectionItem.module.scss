@@ -104,14 +104,15 @@
 
 @media print {
   .Item {
-    font-size: 10pt;
-    margin-bottom: 1rem;
+    font-size: 9.3pt;
+    margin-bottom: 0.7rem;
 
     main {
-      padding-left: 1.5rem;
-      margin-left: 1rem;
+      padding-left: 1.2rem;
+      margin-left: 0.8rem;
+      line-height: 1.4;
       li {
-        padding-left: 0.5rem;
+        padding-left: 0.35rem;
       }
     }
 

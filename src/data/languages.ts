@@ -9,11 +9,11 @@ export const languages: Language[] = [
   {
     name: 'English',
     flag: '🇺🇸',
-    description: 'Cambridge First Certificate'
+    description: 'C2 — Cambridge First Certificate'
   },
   {
     name: 'Japanese',
     flag: '🇯🇵',
-    description: 'JPLT N4 + 3 months in Japan'
+    description: 'JLPT N4 + 3 months studying in Japan'
   },
 ];
